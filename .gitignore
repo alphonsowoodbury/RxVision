@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 #folders
-Data/
+Data/images
