@@ -1,4 +1,4 @@
-# RxID:
+# RxID
 **Increasing Medication Safety with Deep Learning Image Recognition**
 
 <pre>
