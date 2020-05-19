@@ -17,7 +17,7 @@ Contributors:
 
 <pre>
 Presentation: 
-<a href=https://docs.google.com/presentation/d/1Dye5aIbjTM8YkGy2WJ4pVxYUE42atd6EUwtFpzmjtug/edit?usp=sharing>Google Slides</a>
+<a href=https://docs.google.com/presentation/d/e/2PACX-1vTJ6M3NdXdyokIdZT-mPS_Ke_d5NKyQmv7HWIxZ5hOrkwexsM331qzmdN7cBQ5PBvR20fsBACOMeMaM/pub?start=false&loop=false&delayms=3000>Google Slides</a>
 </pre>
 
 ### Prompt:
