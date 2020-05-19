@@ -1,5 +1,8 @@
-# RxID
+![title.jpg](https://github.com/a-woodbury/RxID/blob/master/Images/RxID-1.jpg)
+
 **Increasing Medication Safety with Deep Learning Image Recognition**
+
+***This model is currently under development; please check back 05/29 for the latest metrics***
 
 <pre>
 Domain             : 
@@ -15,7 +18,7 @@ Contributors:
 
 <pre>
 Presentation: 
-<a href=https://docs.google.com/presentation/d/1Dye5aIbjTM8YkGy2WJ4pVxYUE42atd6EUwtFpzmjtug/edit?usp=sharing>Google Slides</a>
+<a href=https://docs.google.com/presentation/d/e/2PACX-1vTJ6M3NdXdyokIdZT-mPS_Ke_d5NKyQmv7HWIxZ5hOrkwexsM331qzmdN7cBQ5PBvR20fsBACOMeMaM/pub?start=false&loop=false&delayms=3000>Google Slides</a>
 </pre>
 
 ### Prompt:
@@ -28,7 +31,7 @@ GitHub Link      : <a href=Link>File Name </a>
 
 ### Dataset
 <pre>
-Dataset Links    : <a href=Link>Dataset Description</a>
+Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image.html>NIH RxImage Portal</a>
 </pre>
 
 ### Recommendations:
@@ -45,5 +48,5 @@ Libraries               :
 ### Dates
 <pre>
 Duration                : May 2020
-Last Update             : 05.10.2020
+Last Update             : 05.19.2020
 </pre>
