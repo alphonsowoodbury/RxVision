@@ -1,4 +1,4 @@
-! [title](https://github.com/a-woodbury/RxID/blob/master/Images/RxID-1.jpg)
+![title.jpg](https://github.com/a-woodbury/RxID/blob/master/Images/RxID-1.jpg)
 
 # RxID
 **Increasing Medication Safety with Deep Learning Image Recognition**
