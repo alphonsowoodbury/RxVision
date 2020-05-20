@@ -58,7 +58,7 @@ We have identified the most common medications dispensed in the us by ingredient
 ### Presentation
 
 <pre>
-<a href=https://github.com/a-woodbury/RxID/blob/master/Presentation/RxID.pdf>Google Slides</a>
+<a href=https://github.com/a-woodbury/RxID/blob/master/Presentation/RxID.pdf>Slide Deck</a>
 </pre>
 
 ### Tools / Libraries
