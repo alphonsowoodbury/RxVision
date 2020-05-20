@@ -30,6 +30,11 @@ Other              : <a href=Link>Recreating the Model Guide</a>
 [Project Info](https://github.com/a-woodbury/RxID#project-info) -
 [Works Cited](https://github.com/a-woodbury/RxID#works-cited)
 
+<pre>
+Contributors:
+<a href=https://github.com/a-woodbury>Alphonso Woodbury</a>
+</pre>
+
 ## The Problem
 
 
