@@ -2,7 +2,11 @@
 
 **Increasing Medication Safety with Deep Learning Image Recognition**
 
+### Problem
 
+Despite increases in spending and tremendous advances in technology in the last several decades, medication errors and imjury/morbity from errors has contiued to increase. RxID attempts to use deep learning in an image recognition model to identify medications as to reduce the risk of medication error, and, ultimately, the human and financial cost of an Adverse Medical Event.
+
+We accessed the NIH RxImage dataset to collect images for training a model. This dataset included a directory flat-file for analysis and referencing the images. The below notebooks provide guidance on accessing the directory and creating a model with the downloaded images. 
 
 ### Code
 <pre>
@@ -16,8 +20,6 @@ Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image
 
 This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository. 
 </pre>
-
-
 
 ### Results
 
