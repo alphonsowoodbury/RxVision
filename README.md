@@ -20,8 +20,9 @@ Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image
 </pre>
 
 **ReadME Navigation**
+
 [Problem](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
-[](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
+[The Model](https://github.com/a-woodbury/RxID#the-model)
 [](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
 [](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
 [](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
