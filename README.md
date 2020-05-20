@@ -11,10 +11,16 @@ Techniques         : Deep Convolutional Neural Network, ImageNet, Inception
 Application        : Image Recognition, Image Classification, Medical Imaging
 </pre>
 
+### Code
 <pre>
-Contributors:
-<a href=https://github.com/a-woodbury>Alphonso Woodbury</a>
+GitHub Link      : <a href=Link>File Name </a>
+</pre>
 
+### Dataset
+<pre>
+Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image.html>NIH RxImage Portal</a>
+
+This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository. 
 </pre>
 
 <pre>
