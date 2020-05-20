@@ -21,11 +21,11 @@ Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image
 
 **ReadME Navigation**
 
-[Problem](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
-[The Model](https://github.com/a-woodbury/RxID#the-model)
-[Results](https://github.com/a-woodbury/RxID#results)
-[Recommendations](https://github.com/a-woodbury/RxID#recommendations)
-[Future](https://github.com/a-woodbury/RxID#future)
+[Problem](https://github.com/a-woodbury/RxID/blob/master/README.md#more) - 
+[The Model](https://github.com/a-woodbury/RxID#the-model) - 
+[Results](https://github.com/a-woodbury/RxID#results) - 
+[Recommendations](https://github.com/a-woodbury/RxID#recommendations) - 
+[Future](https://github.com/a-woodbury/RxID#future) - 
 [More](https://github.com/a-woodbury/RxID#more)
 
 ### Dataset
