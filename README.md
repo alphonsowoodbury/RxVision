@@ -46,8 +46,15 @@ This project uses 749 images, 15 classes from the NIH drug image dataset. The im
 
 The model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100 epochs. 
 
+### Improving the current model
 
+**Transfer Learning**
+  - VGG16 candidate
 
+**Additional augmentation; sciImage**
+  - central_crop
+  - block_out
+  - contrast
 
 ## Recommendations:
 
@@ -64,15 +71,7 @@ The model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100
 
 - Intervening in accidental or intentional poisoning
 
-### Improving the current model
 
-**Transfer Learning**
-  - VGG16 candidate
-
-**Additional augmentation; sciImage**
-  - central_crop
-  - block_out
-  - contrast
  
 ## Future
 
