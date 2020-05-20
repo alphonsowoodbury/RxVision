@@ -2,12 +2,6 @@
 
 **Increasing Medication Safety with Deep Learning Image Recognition**
 
-<pre>
-Domain             : Computer Vision, Machine Learning
-Sub-Domain         : Deep Learning, Image Recognition
-Techniques         : Deep Convolutional Neural Network, 
-Application        : Image Recognition, Image Classification
-</pre>
 
 
 ### Code
@@ -78,4 +72,9 @@ Duration                : May 2020
 Last Update             : 05.20.2020
 </pre>
 
-
+<pre>
+Domain             : Computer Vision, Machine Learning
+Sub-Domain         : Deep Learning, Image Recognition
+Techniques         : Deep Convolutional Neural Network, 
+Application        : Image Recognition, Image Classification
+</pre>
