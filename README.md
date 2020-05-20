@@ -85,7 +85,7 @@ A fascinating project in South Korea aimed to use image recognition on street re
 
 ## Project Info
 <pre>
-Contributors: <a href=https://github.com/a-woodbury>Alphonso Woodbury</a>
+Contributors : <a href=https://github.com/a-woodbury>Alphonso Woodbury</a>
 </pre>
 
 <pre>
