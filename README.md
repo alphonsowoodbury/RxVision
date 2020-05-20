@@ -57,7 +57,7 @@ The model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100
  
 ### Next Steps:
 
-Once the model accuracy is above 85%, I would like to use RxID15 to transfer learning to models for more medications
+Once the model accuracy is above ??%, I would like to use RxID15 to transfer learning to models for more medications
 
 I have a vision of the model serving many diverse groups of patients, including those addicted to opioids. To help opiod users avoid ingesting contaminated medications, I would like to make a model for distinguishing authentic from counterfeit medications. 
 
