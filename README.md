@@ -65,9 +65,9 @@ I have a vision of the model serving many diverse groups of patients, including 
 
 A fascinating project in South Korea aimed to use image recognition on street recreational tablets with unique presses. Athough the constiution of such a drug could not be validated via image recognition, it could assist recreation drug users in avoid detrimental effects of potentialy tainted products. 
 
-# More
+## More
 
-## Tools / Libraries
+### Tools / Libraries
 <pre>
 Languages               : Python
 Tools/IDE               : Anaconda, Colab
