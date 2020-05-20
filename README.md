@@ -2,7 +2,9 @@
 
 **Increasing Medication Safety with Deep Learning Image Recognition**
 
-# Problem
+# RxID
+
+## Overview
 
 Despite increases in spending and tremendous advances in technology in the last several decades, medication errors and imjury/morbity from errors has contiued to increase. RxID attempts to use deep learning in an image recognition model to identify medications as to reduce the risk of medication error, and, ultimately, the human and financial cost of an Adverse Medical Event.
 
@@ -10,7 +12,7 @@ I accessed the NIH RxImage dataset to collect images for training a model. This 
 
 If successful, this model has potential implementations discussed below in Recommendations. 
 
-### Repository Navigation
+## Repository Navigation
 <pre>
 GitHub Link      : <a href=https://github.com/a-woodbury/RxID/blob/master/RxID15_Data_Collection.ipynb>Data Collection Notebook </a>
 GitHub Link      : <a href=https://github.com/a-woodbury/RxID/blob/master/RxID15_Modeling.ipynb>Modeling </a>
@@ -19,7 +21,7 @@ Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image
 <a href=https://docs.google.com/presentation/d/1f2bLza9GFhIXUAMudNsb00RTpHAwg5JegGIw2i2Jg8A/edit?usp=sharing>Google Slides</a>
 </pre>
 
-**ReadME Navigation**
+## ReadME Navigation
 
 [Problem](https://github.com/a-woodbury/RxID/blob/master/README.md#more) - 
 [The Model](https://github.com/a-woodbury/RxID#the-model) - 
