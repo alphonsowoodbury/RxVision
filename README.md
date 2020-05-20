@@ -10,7 +10,7 @@ I accessed the NIH RxImage dataset to collect images for training a model. This 
 
 If successful, this model has potential implementations discussed below in Recommendations. 
 
-### Code
+### Project Navigation
 <pre>
 GitHub Link      : <a href=https://github.com/a-woodbury/RxID/blob/master/RxID15_Data_Collection.ipynb>Data Collection Notebook </a>
 GitHub Link      : <a href=https://github.com/a-woodbury/RxID/blob/master/RxID15_Modeling.ipynb>Modeling </a>
