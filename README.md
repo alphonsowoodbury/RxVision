@@ -67,6 +67,7 @@ A fascinating project in South Korea aimed to use image recognition on street re
 
 <pre>
 <a href=https://github.com/a-woodbury/RxID/blob/master/Presentation/RxID.pdf>Slide Deck</a>
+<a href=https://docs.google.com/presentation/d/1f2bLza9GFhIXUAMudNsb00RTpHAwg5JegGIw2i2Jg8A/edit?usp=sharing>Google Slides</a>
 </pre>
 
 ### Tools / Libraries
