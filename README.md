@@ -57,7 +57,7 @@ The model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100
   - block_out
   - contrast
  
-### Next Steps:
+## Future
 
 Once the model accuracy is above ??%, I would like to use RxID15 to transfer learning to models for more medications
 
@@ -65,12 +65,6 @@ I have a vision of the model serving many diverse groups of patients, including 
 
 A fascinating project in South Korea aimed to use image recognition on street recreational tablets with unique presses. Athough the constiution of such a drug could not be validated via image recognition, it could assist recreation drug users in avoid detrimental effects of potentialy tainted products. 
 
-### Presentation
-
-<pre>
-<a href=https://github.com/a-woodbury/RxID/blob/master/Presentation/RxID.pdf>Slide Deck</a>
-<a href=https://docs.google.com/presentation/d/1f2bLza9GFhIXUAMudNsb00RTpHAwg5JegGIw2i2Jg8A/edit?usp=sharing>Google Slides</a>
-</pre>
 
 ### Tools / Libraries
 <pre>
