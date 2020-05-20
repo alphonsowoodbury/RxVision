@@ -75,15 +75,24 @@ Medication errors are the source of 5% of malpractice claims (Byron J. Bailey. â
 
 ### Recommendations:
 RxID can be implemented in several environments: 
-- Mail-order/Retail Pharmacy production, as a supplemental check before releasing a prescription. 
-- Patient or Caregiver smartphone app, for real-time identification of oral tablets and capsules as needed for
+- **Mail-order/Retail Pharmacy production**, as a supplemental check before releasing a prescription. 
+- **Patient or Caregiver smartphone app**, for real-time identification of oral tablets and capsules as needed for
   - Visual impairment
   - Drug change
   - Recalls
   - Mixed meds
+ - **First Responder app** for intervening in accidental or intentional poisoning
 
 ### Next Steps:
-Firstly, we would like to implement transfer learning using VGG16 to execute feature extraction. This should provide a boost to our baseline performance. 
+To improve model performance and utility, we aim to increase accuracy and the number of classes (medications). 
+
+**Performance**
+- Transfer Learning
+
+**Utility**
+We have identified the most common medications dispensed in the us by ingredient, but will need to train our model on as many of the manufacturer's tablets/capsules as possible to increase the usefulness of the model.
+
+
 
 
 ### Tools / Libraries
