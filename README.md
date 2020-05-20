@@ -2,8 +2,6 @@
 
 **Increasing Medication Safety with Deep Learning Image Recognition**
 
-# RxID
-
 ## Overview
 
 Despite increases in spending and tremendous advances in technology in the last several decades, medication errors and imjury/morbity from errors has contiued to increase. RxID attempts to use deep learning in an image recognition model to identify medications as to reduce the risk of medication error, and, ultimately, the human and financial cost of an Adverse Medical Event.
