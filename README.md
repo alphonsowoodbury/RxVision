@@ -74,7 +74,10 @@ Adverse drug events cost the United States $37.6 billion each year, and approxim
 Medication errors are the source of 5% of malpractice claims (Byron J. Bailey. “Medical Liability Issues: Where Malpractice Claims Come From and How to Survive Them,” July 2002). The average jury award for medication error cases is $636,844 (Jury Verdict Research, “2000 Current Award Trends in Personal Injury,” June 2001).
 
 ### Recommendations:
-
+RxID can be implemented in several environments: 
+- Mail-order/Retail Pharmacy production, as a supplemental check before releasing a prescription. 
+- Patient/Caregiver smartphone app, for real-time identification of oral tablets and capsules as needed for
+  - 
 ### Next Steps:
 Firstly, we would like to implement transfer learning using VGG16 to execute feature extraction. This should provide a boost to our baseline performance. 
 
