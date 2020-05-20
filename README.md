@@ -73,23 +73,6 @@ Adverse drug events cost the United States $37.6 billion each year, and approxim
 
 Medication errors are the source of 5% of malpractice claims (Byron J. Bailey. “Medical Liability Issues: Where Malpractice Claims Come From and How to Survive Them,” July 2002). The average jury award for medication error cases is $636,844 (Jury Verdict Research, “2000 Current Award Trends in Personal Injury,” June 2001).
 
-
-
-
-
-
-### Code
-<pre>
-GitHub Link      : <a href=Link>File Name </a>
-</pre>
-
-### Dataset
-<pre>
-Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image.html>NIH RxImage Portal</a>
-
-This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository. 
-</pre>
-
 ### Recommendations:
 
 ### Next Steps:
