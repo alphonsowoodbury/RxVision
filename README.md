@@ -9,6 +9,19 @@ Techniques         : Deep Convolutional Neural Network, ImageNet, Inception
 Application        : Image Recognition, Image Classification, Medical Imaging
 </pre>
 
+### Tools / Libraries
+<pre>
+Languages               : Python
+Tools/IDE               : Anaconda, Colab
+Libraries               : Tensorflow, Keras, imagio, PIL, ftplib
+</pre>
+
+### Dates
+<pre>
+Duration                : May 2020
+Last Update             : 05.20.2020
+</pre>
+
 ### Code
 <pre>
 GitHub Link      : <a href=Link>Data Collection Notebook </a>
@@ -95,15 +108,4 @@ We have identified the most common medications dispensed in the us by ingredient
 
 
 
-### Tools / Libraries
-<pre>
-Languages               : Python
-Tools/IDE               : Anaconda, Colab
-Libraries               : Tensorflow, Keras, imagio, PIL, ftplib
-</pre>
 
-### Dates
-<pre>
-Duration                : May 2020
-Last Update             : 05.20.2020
-</pre>
