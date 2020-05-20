@@ -13,7 +13,7 @@ If successful, this model has potential implementations discussed below in Recom
 ### Code
 <pre>
 GitHub Link      : <a href=https://github.com/a-woodbury/RxID/blob/master/RxID15_Data_Collection.ipynb>Data Collection Notebook </a>
-GitHub Link      : <a href=Link>Modeling </a>
+GitHub Link      : <a href=https://github.com/a-woodbury/RxID/blob/master/RxID15_Modeling.ipynb>Modeling </a>
 </pre>
 
 ### Dataset
