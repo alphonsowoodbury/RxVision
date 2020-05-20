@@ -31,8 +31,7 @@ Other              : <a href=Link>Recreating the Model Guide</a>, <a href=Link>D
 [Works Cited](https://github.com/a-woodbury/RxID#works-cited)
 
 <pre>
-Contributors:
-<a href=https://github.com/a-woodbury>Alphonso Woodbury</a>
+Contributors: <a href=https://github.com/a-woodbury>Alphonso Woodbury</a>
 </pre>
 
 ## Problem
