@@ -2,8 +2,6 @@
 
 **Increasing Medication Safety with Deep Learning Image Recognition**
 
-***This model is currently under development; please check back 05/29 for the latest metrics***
-
 <pre>
 Domain             : Computer Vision, Machine Learning
 Sub-Domain         : Deep Learning, Image Recognition
@@ -13,7 +11,8 @@ Application        : Image Recognition, Image Classification, Medical Imaging
 
 ### Code
 <pre>
-GitHub Link      : <a href=Link>File Name </a>
+GitHub Link      : <a href=Link>Data Collection Notebook </a>
+GitHub Link      : <a href=Link>Modeling </a>
 </pre>
 
 ### Dataset
