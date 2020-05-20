@@ -28,7 +28,13 @@ Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image
 [Future](https://github.com/a-woodbury/RxID#future) - 
 [More](https://github.com/a-woodbury/RxID#more)
 
-### Dataset
+## The Problem
+
+
+
+
+
+## The Data
 
 This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository. 
 
