@@ -9,18 +9,6 @@ Techniques         : Deep Convolutional Neural Network,
 Application        : Image Recognition, Image Classification
 </pre>
 
-### Tools / Libraries
-<pre>
-Languages               : Python
-Tools/IDE               : Anaconda, Colab
-Libraries               : Tensorflow, Keras, imagio, PIL, ftplib
-</pre>
-
-### Dates
-<pre>
-Duration                : May 2020
-Last Update             : 05.20.2020
-</pre>
 
 ### Code
 <pre>
@@ -74,7 +62,17 @@ To improve model performance and utility, we aim to increase accuracy and the nu
 **Utility**
 We have identified the most common medications dispensed in the us by ingredient, but will need to train our model on as many of the manufacturer's tablets/capsules as possible to increase the usefulness of the model.
 
+### Tools / Libraries
+<pre>
+Languages               : Python
+Tools/IDE               : Anaconda, Colab
+Libraries               : Tensorflow, Keras, imagio, PIL, ftplib
+</pre>
 
-
+### Dates
+<pre>
+Duration                : May 2020
+Last Update             : 05.20.2020
+</pre>
 
 
