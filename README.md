@@ -27,7 +27,7 @@ Other              : <a href=Link>Recreating the Model Guide</a>
 [Results](https://github.com/a-woodbury/RxID#results) - 
 [Recommendations](https://github.com/a-woodbury/RxID#recommendations) - 
 [Future](https://github.com/a-woodbury/RxID#future) - 
-[Project Info](https://github.com/a-woodbury/RxID#project-info)
+[Project Info](https://github.com/a-woodbury/RxID#project-info) -
 [Works Cited](https://github.com/a-woodbury/RxID#works-cited)
 
 ## The Problem
