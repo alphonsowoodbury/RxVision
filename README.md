@@ -23,10 +23,7 @@ Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image
 This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository. 
 </pre>
 
-<pre>
-Presentation: 
-<a href=https://docs.google.com/presentation/d/e/2PACX-1vTJ6M3NdXdyokIdZT-mPS_Ke_d5NKyQmv7HWIxZ5hOrkwexsM331qzmdN7cBQ5PBvR20fsBACOMeMaM/pub?start=false&loop=false&delayms=3000>Google Slides</a>
-</pre>
+
 
 ### Results
 
@@ -61,6 +58,12 @@ To improve model performance and utility, we aim to increase accuracy and the nu
 
 **Utility**
 We have identified the most common medications dispensed in the us by ingredient, but will need to train our model on as many of the manufacturer's tablets/capsules as possible to increase the usefulness of the model.
+
+### Presentation
+
+<pre>
+<a href=https://docs.google.com/presentation/d/e/2PACX-1vTJ6M3NdXdyokIdZT-mPS_Ke_d5NKyQmv7HWIxZ5hOrkwexsM331qzmdN7cBQ5PBvR20fsBACOMeMaM/pub?start=false&loop=false&delayms=3000>Google Slides</a>
+</pre>
 
 ### Tools / Libraries
 <pre>
