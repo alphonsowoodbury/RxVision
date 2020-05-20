@@ -6,7 +6,7 @@
 
 Despite increases in spending and tremendous advances in technology in the last several decades, medication errors and imjury/morbity from errors has contiued to increase. RxID attempts to use deep learning in an image recognition model to identify medications as to reduce the risk of medication error, and, ultimately, the human and financial cost of an Adverse Medical Event.
 
-We accessed the NIH RxImage dataset to collect images for training a model. This dataset included a directory flat-file for analysis and referencing the images. The below notebooks provide guidance on accessing the directory and creating a model with the downloaded images.
+I accessed the NIH RxImage dataset to collect images for training a model. This dataset included a directory flat-file for analysis and referencing the images. The below notebooks provide guidance on accessing the directory and creating a model with the downloaded images.
 
 If successful, this model has potential implementations discussed below in Recommendations. 
 
@@ -40,26 +40,32 @@ The model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100
 - A supplemental check before releasing a prescription.
 
 **Patient or Caregiver smartphone app**
-  - Visual impairment
-  - Drug change
-  - Recalls
-  - Mixed meds
+- Visual impairment
+- Drug change
+- Recalls
+- Mixed meds
 
-**First Responder app** for intervening in accidental or intentional poisoning
+**First Responder app** 
 
-### Improvement
+- Intervening in accidental or intentional poisoning
 
- - Transfer Learning
- - More classes
+### Improving the current model
+
+ - **Transfer Learning**
+  - VGG16 candidate
+
+ - **Additional augmentation; sciImage**
+  - central_crop
+  - block_out
+  - contrast
  
 ### Next Steps:
-To improve model performance and utility, we aim to increase accuracy and the number of classes (medications). 
 
-**Performance**
-- Transfer Learning
+Once the model accuracy is above 85%, I would like to use RxID15 to transfer learning to models for more medications
 
-**Utility**
-We have identified the most common medications dispensed in the us by ingredient, but will need to train our model on as many of the manufacturer's tablets/capsules as possible to increase the usefulness of the model.
+I have a vision of the model serving many diverse groups of patients, including those addicted to opioids. To help opiod users avoid ingesting contaminated medications, I would like to make a model for distinguishing authentic from counterfeit medications. 
+
+A fascinating project in South Korea aimed to use image recognition on street recreational tablets with unique presses. Athough the constiution of such a drug could not be validated via image recognition, it could assist recreation drug users in avoid detrimental effects of potentialy tainted products. 
 
 ### Presentation
 
