@@ -82,19 +82,19 @@ A fascinating project in South Korea aimed to use image recognition on street re
 ## Project Info
 
 <pre>
-Languages               : Python
-Tools/IDE               : Anaconda, Colab
-Libraries               : Tensorflow, Keras, imagio, PIL, ftplib
+Languages    : Python
+Tools/IDE    : Anaconda, Colab
+Libraries    : Tensorflow, Keras, imagio, PIL, ftplib
 </pre>
 
 <pre>
-Duration                : May 2020
-Last Update             : 05.20.2020
+Duration     : May 2020
+Last Update  : 05.20.2020
 </pre>
 
 <pre>
-Domain             : Computer Vision, Machine Learning
-Sub-Domain         : Deep Learning, Image Recognition
-Techniques         : Deep Convolutional Neural Network, 
-Application        : Image Recognition, Image Classification
+Domain       : Computer Vision, Machine Learning
+Sub-Domain   : Deep Learning, Image Recognition
+Techniques   : Deep Convolutional Neural Network, 
+Application  : Image Recognition, Image Classification
 </pre>
