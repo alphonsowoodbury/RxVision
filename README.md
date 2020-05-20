@@ -27,7 +27,7 @@ This project uses 749 images, 15 classes from the NIH drug image dataset. The im
 
 THe model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100 epochs. 
 
-![model-summary.png] (https://github.com/a-woodbury/RxID/blob/master/Images/model-summary.png)
+![model-summary.png](https://github.com/a-woodbury/RxID/blob/master/Images/model-summary.png)
 
 ![results.png](https://github.com/a-woodbury/RxID/blob/master/Images/CNN%204-Acc_Loss.png)
 
