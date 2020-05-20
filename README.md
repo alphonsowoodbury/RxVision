@@ -10,7 +10,7 @@ I accessed the NIH RxImage dataset to collect images for training a model. This 
 
 If successful, this model has potential implementations discussed below in Recommendations. 
 
-### Project Navigation
+### Repository Navigation
 <pre>
 GitHub Link      : <a href=https://github.com/a-woodbury/RxID/blob/master/RxID15_Data_Collection.ipynb>Data Collection Notebook </a>
 GitHub Link      : <a href=https://github.com/a-woodbury/RxID/blob/master/RxID15_Modeling.ipynb>Modeling </a>
@@ -19,12 +19,13 @@ Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image
 <a href=https://docs.google.com/presentation/d/1f2bLza9GFhIXUAMudNsb00RTpHAwg5JegGIw2i2Jg8A/edit?usp=sharing>Google Slides</a>
 </pre>
 
-https://github.com/a-woodbury/RxID/blob/master/README.md#more
-https://github.com/a-woodbury/RxID/blob/master/README.md#more
-https://github.com/a-woodbury/RxID/blob/master/README.md#more
-https://github.com/a-woodbury/RxID/blob/master/README.md#more
-https://github.com/a-woodbury/RxID/blob/master/README.md#more
-https://github.com/a-woodbury/RxID/blob/master/README.md#more
+**ReadME Navigation**
+[](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
+[](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
+[](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
+[](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
+[](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
+[](https://github.com/a-woodbury/RxID/blob/master/README.md#more)
 
 ### Dataset
 
