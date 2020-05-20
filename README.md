@@ -25,7 +25,7 @@ Presentation       : <a href=https://github.com/a-woodbury/RxID/blob/master/Pres
 [Results](https://github.com/a-woodbury/RxID#results) - 
 [Recommendations](https://github.com/a-woodbury/RxID#recommendations) - 
 [Future](https://github.com/a-woodbury/RxID#future) - 
-[More](https://github.com/a-woodbury/RxID#more)
+[Project Info](https://github.com/a-woodbury/RxID#project-info)
 
 ## The Problem
 
@@ -79,16 +79,14 @@ I have a vision of the model serving many diverse groups of patients, including 
 
 A fascinating project in South Korea aimed to use image recognition on street recreational tablets with unique presses. Athough the constiution of such a drug could not be validated via image recognition, it could assist recreation drug users in avoid detrimental effects of potentialy tainted products. 
 
-## More
+## Project Info
 
-### Tools / Libraries
 <pre>
 Languages               : Python
 Tools/IDE               : Anaconda, Colab
 Libraries               : Tensorflow, Keras, imagio, PIL, ftplib
 </pre>
 
-### Dates
 <pre>
 Duration                : May 2020
 Last Update             : 05.20.2020
