@@ -35,17 +35,17 @@ Contributors:
 <a href=https://github.com/a-woodbury>Alphonso Woodbury</a>
 </pre>
 
-## The Problem
+## Problem
 
 
 
 
 
-## The Data
+## Data
 
 This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository. 
 
-## The Model
+## Model
 
 ## Results
 
