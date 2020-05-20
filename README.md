@@ -51,10 +51,10 @@ The model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100
 
 ### Improving the current model
 
- - **Transfer Learning**
+**Transfer Learning**
   - VGG16 candidate
 
- - **Additional augmentation; sciImage**
+**Additional augmentation; sciImage**
   - central_crop
   - block_out
   - contrast
