@@ -29,10 +29,10 @@ This project uses 749 images, 15 classes from the NIH drug image dataset. The im
 
 The model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100 epochs. 
 
-![results.png](https://github.com/a-woodbury/RxID/blob/master/Images/CNN%204-Acc_Loss.png)
 
 
-### Recommendations:
+
+## Recommendations:
 
 **Mail-order/Retail Pharmacy production**
 - A supplemental check before releasing a prescription.
