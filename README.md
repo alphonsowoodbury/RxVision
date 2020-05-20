@@ -86,6 +86,13 @@ Adverse drug events cost the United States $37.6 billion each year, and approxim
 
 Medication errors are the source of 5% of malpractice claims (Byron J. Bailey. “Medical Liability Issues: Where Malpractice Claims Come From and How to Survive Them,” July 2002). The average jury award for medication error cases is $636,844 (Jury Verdict Research, “2000 Current Award Trends in Personal Injury,” June 2001).
 
+### Results
+
+THe model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100 epochs. 
+
+![results.png](https://github.com/a-woodbury/RxID/blob/master/Images/CNN%204-Acc_Loss.png)
+
+
 ### Recommendations:
 
 **Mail-order/Retail Pharmacy production**
