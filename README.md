@@ -21,6 +21,8 @@ Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image
 
 This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository. 
 
+### The Model
+
 ### Results
 
 The model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100 epochs. 
