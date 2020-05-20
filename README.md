@@ -19,6 +19,8 @@ Dataset Links    : <a href=https://www.nlm.nih.gov/databases/download/pill_image
 <a href=https://docs.google.com/presentation/d/1f2bLza9GFhIXUAMudNsb00RTpHAwg5JegGIw2i2Jg8A/edit?usp=sharing>Google Slides</a>
 </pre>
 
+
+
 ### Dataset
 
 This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository. 
