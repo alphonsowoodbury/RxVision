@@ -34,6 +34,10 @@ Other              : <a href=Link>Recreating the Model Guide</a>, <a href=Link>D
 
 ![ADE.png](https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png)
 
+<p align="center">
+  <img https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png/>
+</p>
+
 ## Data
 
 This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository. 
