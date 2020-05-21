@@ -30,9 +30,9 @@ Other              : <a href=Link>Recreating the Model Guide</a>, <a href=Link>D
 
 Americans are taking more medications than ever. In 2019, more than 4 billion prescriptions were dispensed in retail and mail-order  pharmacies at a cost of $551 billion[kff]. This is in sharp contrast to the 3 billion prescriptions and $117 billion spent in 2000. Across all demographics, 89% of Americans take at least one daily medication, while 29% are taking 5 or more. Per capita, we've gone from 10.8 presctions in 2000 to in 11.9 in 2019. 
 
-These data are skewed when chronic, costly conditions are considered. For example, patients treated for diabetes take on average 4 times as many medications [gw]. Another major driver of prescription use increase is the aging population. About 52 million Americans are of age 65 or older and taking the lions share of medications.
+These data are skewed when chronic, costly conditions are considered. For example, patients treated for diabetes take 4 times as many medications as those not recieing diabetes treatment[gw]. Another major driver of prescription use increase is the aging population; about 52 million Americans are of age 65 or older and taking the lions share of medications.
 
-When considering this growth, it becomes more clear why medical/medication error would be identified as the third leading cause of death in the US in 2016. As patients take more medications, the risk of interactions, side effects, and errors increase as well. The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medicatoin errors. 
+When considering this growth, it becomes more clear why medical/medication error would be identified as the third leading cause of death in the US in 2016. As patients take more medications, the risk of interactions, side effects, and errors increase as well. The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medication errors. 
 
 > **Medication Error:** Any preventable event that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the healthcare professional, patient, or consumer.
 > 
@@ -44,7 +44,17 @@ When considering this growth, it becomes more clear why medical/medication error
   <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn"/>
 </p>
 
-When an ADE or ADR is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs and ADRs are caused by mediation error, and not all medication errors lead to an ADE or ADR. We want to focus on reducting medication errors at the pharmacy and patient level as much as possible. 
+When an ADE or ADR is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs and ADRs are caused by medication error, and not all medication errors lead to an ADE or ADR. We want to focus on reducting medication errors at the pharmacy and patient level as much as possible. 
+
+#### Progress
+
+What has been done to reduce medication errors so far
+
+#### Pill Identification
+
+what projects for pill ID; why no implementation?
+
+
 
 ## Data
 
