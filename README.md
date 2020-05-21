@@ -46,13 +46,6 @@ When considering this growth, it becomes more clear why medical/medication error
 </p>	</p>
 
 
-
-<p align="center">
-   <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn"/>
-   Fig.1 - Medication Errors, Events, and Reactions.
-</p>	</p>
-
-
 When an ADE or ADR is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs and ADRs are caused by medication error, and not all medication errors lead to an ADE or ADR. We will narrow our focus on ADEs and ADRs caused by medication error.
 
 ### Progress
@@ -66,11 +59,21 @@ In this project, we are concerned with medication safety from the perspective of
 Computerized prescription management, automated dispensing systems, and online prescription ordering have made it easier to get the right medication to the right patient quickly and safely.
 
 #### Patient Challenges
-Patients still struggle with identifying their medications, and often resort to inconsistent and risky behaviors, like putting all of their medications in one bottle or failing to comply with complicated therapy out of frustration. In the event that a patient needs assistance identifying a medication, they can check an online resource (risky), ask a caregiver, who may or may not be able to assist, or a pharmacist. Pharmacists are tasked with looking up a pill description, which may be fruitless or untimely, and this is a miss in service for the immediate patient and those patients who need the pharmacists time for clinical questions about their therapy (side effects, alternatives, dosing, etc). Patients also may need assistance validating if their medication was included in a recall, and pharmacies are often innundated with these questions during major recall events. 
+
+Patients still struggle with identifying their medications, and often resort to inconsistent and risky behaviors, like putting all of their medications in one bottle or failing to comply with complicated therapy out of frustration. In the event that a patient needs assistance identifying a medication, they can check an online resource (risky), ask a caregiver, who may or may not be able to assist, or a pharmacist. Pharmacists are tasked with looking up a pill description, which may be fruitless or untimely, and this is a miss in service for the immediate patient and those patients who need the pharmacists time for clinical questions about their therapy (side effects, alternatives, dosing, etc). Many patients do not track their presciptions by the National Drug Code (NDC) and may need assistance validating if their medication was included in a recall, and pharmacies are often innundated with these questions during major recall events. 
 
 ##### Recommendation: Patient/Caregiver Support
 
+A smartphone app to cross-reference an identified medication with a patients medication list would give them confidence and reduce the stress of managing their medications. Patients with visual impairment can be sure to distibguish between similar looking medications without needing to strain to identify imprints or scoring. Checking for the recall status of their medications will be effortless as well with this model readily available.
+
+Ideally, the app implementation of this model would be localized to the smartphone; this way no Personal Health Information is transmitted and privacy can be assured. 
+
+
 #### Pharmacy Challenges
+
+Pharmacies invest thousands and millions into their processes and techology stacks to ensure each order is filled accurately per the prescription and received by the designated patient or caregiver. Despite these efforts, medication errors still occur. Payroll hours have continued to drop due to increased competition and pharmacists find themselves taking on more administrative and retail tasks than they had previously, without the help of as many technicians. These pharmacists are under more stress to maintain safety and operate a profitable business, and this leads to fatigue and burnout, which leads to errors. A prescription released to the wrong patient or with the wrong drug is embarrassing, costly, and dangerous.
+
+To minimize this risk, implementing an image recognition model into the dispensing workflow can identify if a bottle has been filled incorrectly before the pharmacist does their visual inspection. Mail-order pharmacies already use cameras to take an overhead snapshot of the filled bottle for later validation if a patient is concerned, but using an image recognition model can proactively catch misfills before they could become errors. 
 
 ##### Recommendation: Dispensing Validation
 
