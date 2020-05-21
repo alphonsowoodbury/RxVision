@@ -38,7 +38,7 @@ This project uses 749 images, 15 classes from the NIH drug image dataset. The im
 
 **Reproduction:** The code needed to request and download images from the NIH server are in the [Data Collection]() notebook. Additional information on this process can be found in the [Recreating the Model Guide]().
 
-In the near future, the NIH dataset will be available from Google Cloud Platform. Videos and corrupt files will be excluded, and all files will be in a smaller format JPG file for faster download and processing. 
+***Note:*** In the near future, the NIH dataset will be available from Google Cloud Platform. Videos and corrupt files will be excluded, and all files will be in a smaller format JPG file for faster download and processing. The notebooks will be updated to reflect this change in data source. 
 
 ## Model
 
