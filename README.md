@@ -30,13 +30,7 @@ Other              : <a href=Link>Recreating the Model Guide</a>, <a href=Link>D
 [Project Info](https://github.com/a-woodbury/RxID#project-info) -
 [Works Cited](https://github.com/a-woodbury/RxID#works-cited)
 
-
-
 ## Problem
-
-
-
-
 
 ## Data
 
@@ -46,35 +40,10 @@ This project uses 749 images, 15 classes from the NIH drug image dataset. The im
 
 ## Results
 
-The model achieved and Accuracy of 0.66 when classfying 15 drug classes over 100 epochs. 
-
 ### Improving the current model
-
-**Transfer Learning**
-  - VGG16 candidate
-
-**Additional augmentation; sciImage**
-  - central_crop
-  - block_out
-  - contrast
 
 ## Recommendations:
 
-**Mail-order/Retail Pharmacy production**
-- A supplemental check before releasing a prescription.
-
-**Patient or Caregiver smartphone app**
-- Visual impairment
-- Drug change
-- Recalls
-- Mixed meds
-
-**First Responder app** 
-
-- Intervening in accidental or intentional poisoning
-
-
- 
 ## Future
 
 Once the model accuracy is above ??%, I would like to use RxID15 to transfer learning to models for more medications
@@ -84,6 +53,7 @@ I have a vision of the model serving many diverse groups of patients, including 
 A fascinating project in South Korea aimed to use image recognition on street recreational tablets with unique presses. Athough the constiution of such a drug could not be validated via image recognition, it could assist recreation drug users in avoid detrimental effects of potentialy tainted products. 
 
 ## Project Info
+
 <pre>
 Contributors : <a href=https://github.com/a-woodbury>Alphonso Woodbury</a>
 </pre>
