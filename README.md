@@ -34,17 +34,17 @@ These data are skewed when chronic, costly conditions are considered. For exampl
 
 When considering this growth, it becomes more clear why medical/medication error would be identified as the third leading cause of death in the US in 2016. As patients take more medications, the risk of interactions, side effects, and errors increase as well. The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medicatoin errors. 
 
-> **Medication Error:**
+> **Medication Error:** Any preventable event that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the healthcare professional, patient, or consumer.
 > 
-> **Adverse Medical Event:** any abnormal sign, symptom or laboratory test, or any syndromic combination of such abnormalities, any untoward or unplanned occurrence (e.g. an accident or unplanned pregnancy), or any unexpected deterioration in a concurrent illness
+> **Adverse Medical Event (ADE):** Any abnormal sign, symptom or laboratory test, or any syndromic combination of such abnormalities, any untoward or unplanned occurrence (e.g. an accident or unplanned pregnancy), or any unexpected deterioration in a concurrent illness
 > 
-> **Adverse Medical Reaction:** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
-
-
+> **Adverse Medical Reaction (ADR):** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
 
 <p align="center">
   <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn"/>
 </p>
+
+As seen in the above graphic, not all ADEs and ADRs are caused by mediation error, and not all medication errors lead to an ADE or ADR.
 
 ## Data
 
