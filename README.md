@@ -44,18 +44,7 @@ When considering this growth, it becomes more clear why medical/medication error
    <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn"/>
       <figcaption>Fig.1 - Medication Errors, Events, and Reactions.</figcaption>
 </p>	</p>
-.caption {
-    text-align: center;
-}	
 
-<div style="align: center; text-align:center;">
-    <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png />
-    <div class="caption">Fig.1 - Medication Errors, Events, and Reactions.</div>
-</div>
-
-.caption {
-    text-align: center;
-}
 
 When an ADE or ADR is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs and ADRs are caused by medication error, and not all medication errors lead to an ADE or ADR.
 
