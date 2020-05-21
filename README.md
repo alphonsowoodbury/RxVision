@@ -53,7 +53,7 @@ What has been done to reduce medication errors so far
 
 #### Pill Identification
 
-We have identified projects and competitions challenging computer engineering teams and labs to create models and applications in pursuit of high-accuracy pill recognition. A major competition, and the spark to this project, was the National Library of Medicine's Pill Identification Challenge in 2016. The winning team from Michigan State University produce *MobileDeepPill*, which was able to correctly identify medications from the 4000+ image set with up to 97% accuracy in certain tests. The team prioritized efficiency and privacy in designing their Android App
+We have identified projects and competitions challenging computer engineering teams and labs to create models and applications in pursuit of high-accuracy pill recognition. A major competition, and the spark to this project, was the National Library of Medicine's [Pill Image Recognition Challenge](https://pir.nlm.nih.gov/challenge/) in 2016. The winning team from Michigan State University produce *MobileDeepPill*, which was able to correctly identify medications from the 4000+ image set with up to 97% accuracy in certain tests. The team prioritized efficiency and privacy in designing their Android App
 what projects for pill ID; why no implementation?
 
 
