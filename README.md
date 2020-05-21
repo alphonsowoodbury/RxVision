@@ -32,10 +32,8 @@ Other              : <a href=Link>Recreating the Model Guide</a>, <a href=Link>D
 
 ## Problem
 
-![ADE.png](https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png)
-
 <p align="center">
-  <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png/>
+  <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn" width="150" height="150" />
 </p>
 
 ## Data
