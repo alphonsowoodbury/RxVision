@@ -55,17 +55,24 @@ When considering this growth, it becomes more clear why medical/medication error
 
 When an ADE or ADR is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs and ADRs are caused by medication error, and not all medication errors lead to an ADE or ADR. We will narrow our focus on ADEs and ADRs caused by medication error.
 
-#### Progress
+### Progress
 
-RxID is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to:
+In this project, we are concerned with medication safety from the perspective of a retail, mail-order, or inpatient pharmacy setting. RxID is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to:
 
-- Guide drug developers and manufacturers provide clearer reporting on drug ingredients, labeling, and manufacturing;
+- Guide drug developers and manufacturers provide clearer reporting on drug ingredients, labeling, and manufacturing (not in scope of RxID);
 - Help pharmacies reduce errors in dispensing and releasing medications;
 - Assist patients in understanding the therapy and complications of their medicines.
 
-Computerized prescription management, automated dispensing systems, and online prescription ordering have made it easier to get the right medication to the right patient quickly and safely. However, patients still struggle with identifying their medications without the support of caregivers
+Computerized prescription management, automated dispensing systems, and online prescription ordering have made it easier to get the right medication to the right patient quickly and safely.
 
-In this project, we are concerned with medication safety from the perspective of a retail or mail-order pharmacy setting. 
+#### Patient Challenges
+Patients still struggle with identifying their medications, and often resort to inconsistent and risky behaviors, like putting all of their medications in one bottle or failing to comply with complicated therapy out of frustration. In the event that a patient needs assistance identifying a medication, they can check an online resource (risky), ask a caregiver, who may or may not be able to assist, or a pharmacist. Pharmacists are tasked with looking up a pill description, which may be fruitless or untimely, and this is a miss in service for the immediate patient and those patients who need the pharmacists time for clinical questions about their therapy (side effects, alternatives, dosing, etc). Patients also may need assistance validating if their medication was included in a recall, and pharmacies are often innundated with these questions during major recall events. 
+
+#### Pharmacy Challenges
+
+
+#### Emergency Challenges
+ 
 
 #### Pill Identification
 
