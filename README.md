@@ -34,11 +34,11 @@ These data are skewed when chronic, costly conditions are considered. For exampl
 
 When considering this growth, it becomes more clear why medical/medication error would be identified as the third leading cause of death in the US in 2016. As patients take more medications, the risk of interactions, side effects, and errors increase as well. The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medicatoin errors. 
 
-**Medication Error:**
-
-**Adverse Medical Event:** any abnormal sign, symptom or laboratory test, or any syndromic combination of such abnormalities, any untoward or unplanned occurrence (e.g. an accident or unplanned pregnancy), or any unexpected deterioration in a concurrent illness
-
-**Adverse Medical Reaction:** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
+>> **Medication Error:**
+>> 
+>> **Adverse Medical Event:** any abnormal sign, symptom or laboratory test, or any syndromic combination of such abnormalities, any untoward or unplanned occurrence (e.g. an accident or unplanned pregnancy), or any unexpected deterioration in a concurrent illness
+>> 
+>> **Adverse Medical Reaction:** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
 
 
 
