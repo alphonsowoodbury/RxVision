@@ -4,7 +4,7 @@
 
 ### Overview
 
-Despite increases in healthcare spending and tremendous advances in technology in the last several decades, medication errors and injury/morbity from errors have continued to increase. The abuse of opiods have certainly contributed to mortality from medication overdoses, but the vast majority of Adverse Drug Reactions occur from patients taking medications as prescribed. The RxID project attempts to use deep learning in an image recognition model to identify medications and propose deployment solutions to reduce the risk and occurence of medication error, and, ultimately, the human and financial cost of an Adverse Medical Event.
+Despite increases in healthcare spending and tremendous advances in technology in the last several decades, medication errors and injury/morbity from errors have continued to increase. The abuse of opiods have certainly contributed to mortality from medication overdoses, but the vast majority of Adverse Drug Events occur from patients taking medications as prescribed. The RxID project attempts to use deep learning in an image recognition model to identify medications and propose deployment solutions to reduce the risk and occurence of medication error, and, ultimately, the human and financial cost of an Adverse Medical Reaction.
 
 ### Repository Navigation
 <pre>
