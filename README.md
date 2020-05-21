@@ -68,11 +68,15 @@ Computerized prescription management, automated dispensing systems, and online p
 #### Patient Challenges
 Patients still struggle with identifying their medications, and often resort to inconsistent and risky behaviors, like putting all of their medications in one bottle or failing to comply with complicated therapy out of frustration. In the event that a patient needs assistance identifying a medication, they can check an online resource (risky), ask a caregiver, who may or may not be able to assist, or a pharmacist. Pharmacists are tasked with looking up a pill description, which may be fruitless or untimely, and this is a miss in service for the immediate patient and those patients who need the pharmacists time for clinical questions about their therapy (side effects, alternatives, dosing, etc). Patients also may need assistance validating if their medication was included in a recall, and pharmacies are often innundated with these questions during major recall events. 
 
+##### Recommendation: Patient/Caregiver Support
+
 #### Pharmacy Challenges
 
+##### Recommendation: Dispensing Validation
 
 #### Emergency Challenges
  
+##### Recommendation: Emergency Intervention
 
 ### Pill Identification
 
