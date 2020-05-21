@@ -65,8 +65,8 @@ Hi !
 
 
 <p align="center">
-
-  <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn"/>Fig.1 - Medication Errors, Events, and Reactions.
+  <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn"/>
+  Fig.1 - Medication Errors, Events, and Reactions.
 </p>
 
 
