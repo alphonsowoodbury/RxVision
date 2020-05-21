@@ -46,13 +46,12 @@ When considering this growth, it becomes more clear why medical/medication error
 </p>		</p>
 
 
-<div style="align: left; text-align:center;">
-    <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png height="31px" width="200px" />
+<div style="align: center; text-align:center;">
+    <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png />
     <div class="caption">Fig.1 - Medication Errors, Events, and Reactions.</div>
 </div>
 
 .caption {
-    width: 200px;
     text-align: center;
 }
 
