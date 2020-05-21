@@ -70,7 +70,7 @@ Hi !
   
   Fig.1 - Medication Errors, Events, and Reactions.
 
-</p></p>
+</p>
 
 
 When an ADE or ADR is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs and ADRs are caused by medication error, and not all medication errors lead to an ADE or ADR.
