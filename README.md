@@ -53,11 +53,17 @@ When considering this growth, it becomes more clear why medical/medication error
 </p>	</p>
 
 
-When an ADE or ADR is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs and ADRs are caused by medication error, and not all medication errors lead to an ADE or ADR.
+When an ADE or ADR is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs and ADRs are caused by medication error, and not all medication errors lead to an ADE or ADR. We will narrow our focus on ADEs and ADRs caused by medication error.
 
 #### Progress
 
-RxID is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to guide drug developers and manufacturers provide clearer reporting on drug ingredients, labeling, and manufacturing; help pharmacies reduce errors in dispensing and releasing medications; assist patients in understanding the therapy and complications of their medicines. Computerized prescription management, automated dispensing systems, and online prescription ordering have made it easier to get the right medication to the right patient quickly and safely. However, patients still struggle with identifying their medications without the support of caregivers
+RxID is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to:
+
+- Guide drug developers and manufacturers provide clearer reporting on drug ingredients, labeling, and manufacturing;
+- Help pharmacies reduce errors in dispensing and releasing medications;
+- Assist patients in understanding the therapy and complications of their medicines.
+
+Computerized prescription management, automated dispensing systems, and online prescription ordering have made it easier to get the right medication to the right patient quickly and safely. However, patients still struggle with identifying their medications without the support of caregivers
 
 In this project, we are concerned with medication safety from the perspective of a retail or mail-order pharmacy setting. 
 
