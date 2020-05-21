@@ -66,20 +66,25 @@ Patients still struggle with identifying their medications, and often resort to 
 
 A smartphone app to cross-reference an identified medication with a patients medication list would give them confidence and reduce the stress of managing their medications. Patients with visual impairment can be sure to distibguish between similar looking medications without needing to strain to identify imprints or scoring. Checking for the recall status of their medications will be effortless as well with this model readily available.
 
-Ideally, the app implementation of this model would be localized to the smartphone; this way no Personal Health Information is transmitted and privacy can be assured. 
-
+Ideally, the app implementation of this model would be localized to the smartphone; this way no Personal Health Information is transmitted and privacy can be assured.
 
 #### Pharmacy Challenges
 
 Pharmacies invest thousands and millions into their processes and techology stacks to ensure each order is filled accurately per the prescription and received by the designated patient or caregiver. Despite these efforts, medication errors still occur. Payroll hours have continued to drop due to increased competition and pharmacists find themselves taking on more administrative and retail tasks than they had previously, without the help of as many technicians. These pharmacists are under more stress to maintain safety and operate a profitable business, and this leads to fatigue and burnout, which leads to errors. A prescription released to the wrong patient or with the wrong drug is embarrassing, costly, and dangerous.
 
-To minimize this risk, implementing an image recognition model into the dispensing workflow can identify if a bottle has been filled incorrectly before the pharmacist does their visual inspection. Mail-order pharmacies already use cameras to take an overhead snapshot of the filled bottle for later validation if a patient is concerned, but using an image recognition model can proactively catch misfills before they could become errors. 
-
 ##### Recommendation: Dispensing Validation
 
+To minimize  risk, implementing an image recognition model into the dispensing workflow can identify if a bottle has been filled incorrectly before the pharmacist does their visual inspection. Mail-order pharmacies already use cameras to take an overhead snapshot of the filled bottle for later validation if a patient is concerned, but using an image recognition model can proactively catch misfills before they could become errors. High-volume chain retail pharmacies would also benefit by taking advantage of the model to avoid sending orders back to technicians for filling correctly. 
+
+
+
 #### Emergency Challenges
+
+During medical emergencies, EMTs and nurses must work quickly to gather information about the patients symptoms, history, and medications. 
  
 ##### Recommendation: Emergency Intervention
+
+If a collection of unsorted medications is found or provided, RxID could give insight into a patients condition, even if the medication is
 
 ### Pill Identification
 
