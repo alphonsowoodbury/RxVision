@@ -32,7 +32,7 @@ Americans are taking more medications than ever. In 2019, more than 4 billion pr
 
 These data are skewed when chronic, costly conditions are considered. For example, patients treated for diabetes take 4 times as many medications as those not recieing diabetes treatment[gw]. Another major driver of prescription use increase is the aging population; about 52 million Americans are of age 65 or older and taking the lions share of medications.
 
-When considering this growth, it becomes more clear why medical/medication error would be identified as the third leading cause of death in the US in 2016. As patients take more medications, the risk of interactions, side effects, and errors increase as well. The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medication errors. 
+When considering this growth, it becomes more clear why medical/medication error would be identified as the third leading cause of death in the US in 2016. As patients take more medications and drugs become more potent and complex, the risk of interactions, side effects, and errors increase as well. The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medication errors. 
 
 > **Medication Error:** Any preventable event that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the healthcare professional, patient, or consumer.
 > 
