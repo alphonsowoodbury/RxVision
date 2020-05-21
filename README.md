@@ -66,8 +66,6 @@ The FDA provides guidance for defining, monitoring, and enforcing practices to r
 
 When an ADE is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs are caused by medication error, and not all medication errors lead to an ADE or ADR. We will narrow our focus on ADEs  caused by medication error.
 
-### Progress
-
 In this project, we are concerned with medication safety from the perspective of a retail, mail-order, or inpatient pharmacy setting. RxID is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to:
 
 - Guide drug developers and manufacturers provide clearer reporting on drug ingredients, labeling, and manufacturing (not in scope of RxID);
@@ -76,7 +74,7 @@ In this project, we are concerned with medication safety from the perspective of
 
 Computerized prescription management, automated dispensing systems, and online prescription ordering have made it easier to get the right medication to the right patient quickly and safely.
 
-#### Patient Challenges
+### Patient Challenges
 
 Patients still struggle with identifying their medications, and often resort to inconsistent and risky behaviors, like putting all of their medications in one bottle or failing to comply with complicated therapy out of frustration. In the event that a patient needs assistance identifying a medication, they can check an online resource (risky), ask a caregiver, who may or may not be able to assist, or a pharmacist. Pharmacists are tasked with looking up a pill description, which may be fruitless or untimely, and this is a miss in service for the immediate patient and those patients who need the pharmacists time for clinical questions about their therapy (side effects, alternatives, dosing, etc). Many patients do not track their presciptions by the National Drug Code (NDC) and may need assistance validating if their medication was included in a recall, and pharmacies are often innundated with these questions during major recall events. 
 
@@ -86,7 +84,7 @@ A smartphone app to cross-reference an identified medication with a patients med
 
 Ideally, the app implementation of this model would be localized to the smartphone; this way no Personal Health Information is transmitted and privacy can be assured.
 
-#### Pharmacy Challenges
+### Pharmacy Challenges
 
 Pharmacies invest thousands and millions into their processes and techology stacks to ensure each order is filled accurately per the prescription and received by the designated patient or caregiver. Despite these efforts, medication errors still occur. Payroll hours have continued to drop due to increased competition and pharmacists find themselves taking on more administrative and retail tasks than they had previously, without the help of as many technicians. These pharmacists are under more stress to maintain safety and operate a profitable business, and this leads to fatigue and burnout, which leads to errors. A prescription released to the wrong patient or with the wrong drug is embarrassing, costly, and dangerous.
 
@@ -98,7 +96,7 @@ To minimize  risk, implementing an image recognition model into the dispensing w
 
 
 
-#### Emergency Challenges
+### Emergency Challenges
 
 During medical emergencies, EMTs and nurses must work quickly to gather information about the patients symptoms, history, and medications. 
  
