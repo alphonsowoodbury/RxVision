@@ -45,11 +45,13 @@ When considering this growth, it becomes more clear why medical/medication error
       <figcaption>Fig.1 - Medication Errors, Events, and Reactions.</figcaption>
 </p>		</p>
 
-When an ADE or ADR is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs and ADRs are caused by medication error, and not all medication errors lead to an ADE or ADR. We want to focus on reducting medication errors at the pharmacy and patient level as much as possible. 
+When an ADE or ADR is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs and ADRs are caused by medication error, and not all medication errors lead to an ADE or ADR.
 
 #### Progress
 
-What has been done to reduce medication errors so far
+RxID is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to guide drug developers and manufacturers provide clearer reporting on drug ingredients, labeling, and manufacturing; help pharmacies reduce errors in dispensing and releasing medications; assist patients in understanding the therapy and complications of their medicines. Computerized prescription management, automated dispensing systems, and online prescription ordering have made it easier to get the right medication to the right patient quickly and safely. However, patients still struggle with identifying their medications without the support of caregivers
+
+In this project, we are concerned with medication safety from the perspective of a retail or mail-order pharmacy setting. 
 
 #### Pill Identification
 
