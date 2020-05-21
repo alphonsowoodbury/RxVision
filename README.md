@@ -32,7 +32,25 @@ Americans are taking more medications than ever. In 2019, more than 4 billion pr
 
 These data are skewed when chronic, costly conditions are considered. Having multiple chronic conditions leads to not only more medications but more contraindicated medicines and treatments for side-effects. For example, patients treated for diabetes take 4 times as many medications as those not recieing diabetes treatment[gw]. Another major driver of prescription use increase is the aging population; about 52 million Americans are of age 65 or older and taking the lions share of medications.
 
-When considering this growth, it becomes more clear why medical/medication error would be identified as the third leading cause of death in the US in 2016. As patients take more medications and drugs become more potent and complex, the risk of interactions, side effects, and errors increase as well. The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medication errors. 
+When considering this growth, it becomes more clear why medical/medication error would be identified as the third leading cause of death in the US in 2016. As patients take more medications and drugs become more potent and complex, the risk of interactions, side effects, and errors increase as well. In response to these errors that lead to heath deficiency or death, malpractice suits have grown to account for 5% of 
+
+
+Carelessly prescribe the wrong medication
+Give a patient the wrong dosage, unintentionally
+Give a patient an unintended medication
+Fail to take a history of the patient’s prescription drug use
+Fail to warn of all risks associated with the medication
+Dangerously mixed different prescription drugs
+
+administering the wrong medication to a patient
+administering the wrong dosage of medication (i.e., too much or too little medication)
+mislabeling the medication
+prescribing the patient a medication that the patient is allergic to
+prescribing the patient a medication that interacts negatively with other medications that the patient is taking, and
+failing to warn the patient of the common side effects of the medication.
+
+
+The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medication errors. 
 
 > **Medication Error:** Any preventable event that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the healthcare professional, patient, or consumer.
 > 
@@ -71,6 +89,8 @@ Ideally, the app implementation of this model would be localized to the smartpho
 #### Pharmacy Challenges
 
 Pharmacies invest thousands and millions into their processes and techology stacks to ensure each order is filled accurately per the prescription and received by the designated patient or caregiver. Despite these efforts, medication errors still occur. Payroll hours have continued to drop due to increased competition and pharmacists find themselves taking on more administrative and retail tasks than they had previously, without the help of as many technicians. These pharmacists are under more stress to maintain safety and operate a profitable business, and this leads to fatigue and burnout, which leads to errors. A prescription released to the wrong patient or with the wrong drug is embarrassing, costly, and dangerous.
+
+In regards to cost, it should be 
 
 ##### Recommendation: Dispensing Validation
 
