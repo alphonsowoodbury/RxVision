@@ -59,8 +59,8 @@ The FDA provides guidance for defining, monitoring, and enforcing practices to r
 > **Adverse Medical Reaction (ADR):** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
 
 <p align="center">
-   <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn" style="width:975px;height:1250px;"/>
-   <figcaption>Fig.1 - Medication Errors, Events, and Reactions.</figcaption>
+   <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn"/>
+   <figcaption>Fig.1 - Medication Errors and Adverse Events.</figcaption>
 </p>	</p>
 
 
