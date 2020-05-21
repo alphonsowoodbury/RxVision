@@ -42,8 +42,7 @@ When considering this growth, it becomes more clear why medical/medication error
 
 <p align="center">
    <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn"/>
-   Fig.1 - Medication Errors, Events, and Reactions.
-      <figcaption>Fig.1 - Medication Errors, Events, and Reactions.</figcaption>
+   <figcaption>Fig.1 - Medication Errors, Events, and Reactions.</figcaption>
 </p>	</p>
 
 
