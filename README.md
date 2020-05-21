@@ -41,7 +41,7 @@ When considering this growth, it becomes more clear why medical/medication error
 > **Adverse Medical Reaction (ADR):** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
 
 <figure>
-  <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn"/>
+  <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn" class="center"/>
   <figcaption>Fig.1 - Medication Errors, Events, and Reactions.</figcaption>
 </figure>
 
