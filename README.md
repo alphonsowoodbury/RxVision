@@ -58,19 +58,18 @@ The FDA provides guidance for defining, monitoring, and enforcing practices to r
 
 When an ADE is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs are caused by medication error, and not all medication errors lead to an ADE or ADR. We will narrow our focus on ADEs  caused by medication error.
 
-Carelessly prescribe the wrong medication
-Give a patient the wrong dosage, unintentionally
-Give a patient an unintended medication
-Fail to take a history of the patient’s prescription drug use
-Fail to warn of all risks associated with the medication
-Dangerously mixed different prescription drugs
-
-administering the wrong medication to a patient
-administering the wrong dosage of medication (i.e., too much or too little medication)
-mislabeling the medication
-prescribing the patient a medication that the patient is allergic to
-prescribing the patient a medication that interacts negatively with other medications that the patient is taking, and
-failing to warn the patient of the common side effects of the medication.
+- Carelessly prescribe the wrong medication
+- Give a patient the wrong dosage, unintentionally
+- Give a patient an unintended medication
+- Fail to take a history of the patient’s prescription drug use
+- Fail to warn of all risks associated with the medication
+- Dangerously mixed different prescription drugs
+- administering the wrong medication to a patient
+- administering the wrong dosage of medication (i.e., too much or too little medication)
+- mislabeling the medication
+- prescribing the patient a medication that the patient is allergic to
+- prescribing the patient a medication that interacts negatively with other medications that the patient is taking, and
+- failing to warn the patient of the common side effects of the medication.
 
 The average cost of an ADE is $2,257 (FDA 2004).
 Adverse drug events cost the United States $37.6 billion each year, and approximately $17 billion of these costs are associated with preventable errors (Source: “To Error is Human: Building a Safer Health System,” a November 1999 report from the Institute of Medicine [IOM]).
