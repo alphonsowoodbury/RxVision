@@ -123,7 +123,6 @@ We have identified projects and competitions challenging computer engineering te
 
 This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository.
 
-
 ### Classes
 
 ![classes.jpg](https://github.com/a-woodbury/RxID/blob/master/Images/classes.jpg)
@@ -132,6 +131,22 @@ This project uses 749 images, 15 classes from the NIH drug image dataset. The im
 **Reproduction:** The code needed to request and download images from the NIH server are in the [Data Collection]() notebook. Additional information on this process can be found in the [Recreating the Model Guide]().
 
 ***Note:*** In the near future, the NIH dataset will be available from Google Cloud Platform. Videos and corrupt files will be excluded, and all files will be in a smaller format JPG file for faster download and processing. The notebooks will be updated to reflect this change in data source. 
+
+### Original Dataset
+
+how many NDCS
+how many images per NDC
+how many manufacturers
+cannot easily distinguish # of drugs
+image types
+
+110 folders, no clear arrangement
+
+Accessing FTP
+
+- ftpib
+
+
 
 ## Model
 
