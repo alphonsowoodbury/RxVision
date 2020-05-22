@@ -35,19 +35,7 @@ These data are skewed when chronic, costly conditions are considered. Having mul
 When considering this growth, it becomes more clear why medical/medication error would be identified as the third leading cause of death in the US in 2016. As patients take more medications and drugs become more potent and complex, the risk of interactions, side effects, and errors increase as well. In response to these errors that lead to heath deficiency or death, malpractice suits have grown to account for 5% of 
 
 
-Carelessly prescribe the wrong medication
-Give a patient the wrong dosage, unintentionally
-Give a patient an unintended medication
-Fail to take a history of the patient’s prescription drug use
-Fail to warn of all risks associated with the medication
-Dangerously mixed different prescription drugs
 
-administering the wrong medication to a patient
-administering the wrong dosage of medication (i.e., too much or too little medication)
-mislabeling the medication
-prescribing the patient a medication that the patient is allergic to
-prescribing the patient a medication that interacts negatively with other medications that the patient is taking, and
-failing to warn the patient of the common side effects of the medication.
 
 
 The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medication errors. 
@@ -65,6 +53,27 @@ The FDA provides guidance for defining, monitoring, and enforcing practices to r
 
 
 When an ADE is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs are caused by medication error, and not all medication errors lead to an ADE or ADR. We will narrow our focus on ADEs  caused by medication error.
+
+Carelessly prescribe the wrong medication
+Give a patient the wrong dosage, unintentionally
+Give a patient an unintended medication
+Fail to take a history of the patient’s prescription drug use
+Fail to warn of all risks associated with the medication
+Dangerously mixed different prescription drugs
+
+administering the wrong medication to a patient
+administering the wrong dosage of medication (i.e., too much or too little medication)
+mislabeling the medication
+prescribing the patient a medication that the patient is allergic to
+prescribing the patient a medication that interacts negatively with other medications that the patient is taking, and
+failing to warn the patient of the common side effects of the medication.
+
+
+```
+Medication errors are the source of 5% of malpractice claims (Byron J. Bailey. “Medical Liability Issues: Where Malpractice Claims Come From and How to Survive Them,” July 2002).
+The average jury award for medication error cases is $636,844 (Jury Verdict Research, “2000 Current Award Trends in Personal Injury,” June 2001).
+```
+
 
 In this project, we are concerned with medication safety from the perspective of a retail, mail-order, or inpatient pharmacy setting. RxID is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to:
 
