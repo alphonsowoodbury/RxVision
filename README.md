@@ -160,8 +160,11 @@ Accessing FTP
 ## Future
 
 ![RxID%Future.png](https://github.com/a-woodbury/RxID/blob/master/Images/RxID%20Future.png)
+
+### More Medications
 Once the model accuracy is above ??%, I would like to use RxID15 to transfer learning to models for more medications
 
+### More Needs
 I have a vision of the model serving many diverse groups of patients, including those addicted to opioids. To help opiod users avoid ingesting contaminated medications, I would like to make a model for distinguishing authentic from counterfeit medications. 
 
 A fascinating project in South Korea aimed to use image recognition on street recreational tablets with unique presses. Athough the constiution of such a drug could not be validated via image recognition, it could assist recreation drug users in avoid detrimental effects of potentialy tainted products. 
