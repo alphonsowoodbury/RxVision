@@ -121,12 +121,9 @@ We have identified projects and competitions challenging computer engineering te
 
 ## Data
 
-This project uses 749 images, 15 classes from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository.
+This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxID/blob/master/Images/classes-5.jpg) from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository.
 
-### Classes
 
-![classes.jpg](https://github.com/a-woodbury/RxID/blob/master/Images/classes.jpg)
-![classes-5.jpg](https://github.com/a-woodbury/RxID/blob/master/Images/classes-5.jpg)
 
 **Reproduction:** The code needed to request and download images from the NIH server are in the [Data Collection]() notebook. Additional information on this process can be found in the [Recreating the Model Guide]().
 
