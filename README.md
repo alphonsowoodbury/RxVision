@@ -68,11 +68,13 @@ prescribing the patient a medication that the patient is allergic to
 prescribing the patient a medication that interacts negatively with other medications that the patient is taking, and
 failing to warn the patient of the common side effects of the medication.
 
+The average cost of an ADE is $2,257 (FDA 2004).
+Adverse drug events cost the United States $37.6 billion each year, and approximately $17 billion of these costs are associated with preventable errors (Source: “To Error is Human: Building a Safer Health System,” a November 1999 report from the Institute of Medicine [IOM]).
+The extra medical costs of treating drug-related injuries occurring in hospitals alone conservatively amount to $3.5 billion a year. This estimate does not take into account lost wages and productivity or additional healthcare costs (Source: “Preventing Medication Errors: Quality Chasm Series,” a July 2006 report from the IOM).
 
-```
 Medication errors are the source of 5% of malpractice claims (Byron J. Bailey. “Medical Liability Issues: Where Malpractice Claims Come From and How to Survive Them,” July 2002).
 The average jury award for medication error cases is $636,844 (Jury Verdict Research, “2000 Current Award Trends in Personal Injury,” June 2001).
-```
+
 
 
 In this project, we are concerned with medication safety from the perspective of a retail, mail-order, or inpatient pharmacy setting. RxID is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to:
