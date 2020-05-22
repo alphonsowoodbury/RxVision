@@ -6,6 +6,10 @@
 
 Despite increases in healthcare spending and tremendous advances in technology in the last several decades, medication errors and injury/morbity from errors have continued to increase. The abuse of opiods have certainly contributed to mortality from medication overdoses, but the vast majority of Adverse Drug Events occur from patients taking medications as prescribed. The RxID project attempts to use deep learning in an image recognition model to identify medications and propose deployment solutions to reduce the risk and occurence of medication error, and, ultimately, the human and financial cost of an Adverse Medical Reaction.
 
+Using the MobileDeepPill model as a benchmark, we aim to initially achieve 50% accuracy and work towards the 97% the MDP team reached. 
+
+**Results (final pending):** Baseline model scored 70% accuracy and final model at this time is nearing 70% as well. 
+
 ### Repository Navigation
 <pre>
 Technical Notebook : <a href=Link>Technical Notebook </a>
