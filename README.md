@@ -157,6 +157,10 @@ Accessing FTP
 
 ## Results
 
+**Baseline Confusion Matrix**
+
+![model1-baseline_conf.png](https://github.com/a-woodbury/RxID/blob/master/Images/model1-baseline_conf.png)
+
 ### Improving the current model
 
 ## Recommendations:
