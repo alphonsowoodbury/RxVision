@@ -8,7 +8,7 @@ Despite increases in healthcare spending and tremendous advances in technology i
 
 Using the MobileDeepPill model as a benchmark, we aim to initially achieve 50% accuracy and work towards the 97% the MDP team reached. 
 
-**Results (final pending):** Baseline model scored 70% accuracy and final model at this time is nearing 70% as well. 
+**Results (final pending):** Baseline model scored 510% accuracy, final model at this time is nearing 70%. 
 
 ### Repository Navigation
 <pre>
