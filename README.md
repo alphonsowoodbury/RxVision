@@ -71,10 +71,10 @@ When an ADE is identified, the course of action is clinical intervention with th
 
 Computerized prescription management, automated dispensing systems, and online prescription ordering have made it easier to get the right medication to the right patient quickly and safely.But human error and negligence will supercede a technological bottleneck if best practices are not upheld. Examples of preventable medication error include:
 
-- Physician
+- **Physician**
    - Carelessly prescribe the wrong medication
 
-- Physician or Pharmacy
+- **Physician or Pharmacy**
    - Give a patient the wrong dosage, unintentionally
    - Fail to take a history of the patient’s prescription drug use
    - Fail to warn of all risks associated with the medication
@@ -84,13 +84,12 @@ Computerized prescription management, automated dispensing systems, and online p
    - prescribing the patient a medication that interacts negatively with other medications that the patient is taking, and
    - failing to warn the patient of the common side effects of the medication.
 
-- Pharmacy
+- **Pharmacy**
    - Give a patient an unintended medication
    - mislabeling the medication
    - administering the wrong medication to a patient
 
-We will narrow our focus on ADEs  caused by medication error at the **pharmacy** or **patient** level. 
-In this project, we are concerned with medication safety from the perspective of a retail, mail-order, or inpatient pharmacy setting. 
+We will narrow our focus on ADEs  caused by medication error at the **pharmacy** or **patient** level.  
 
 ### Patient Challenges
 
