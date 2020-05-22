@@ -146,12 +146,9 @@ This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxID/b
 
 ***Note:*** In the near future, the NIH dataset will be available from Google Cloud Platform. Videos and corrupt files will be excluded, and all files will be in a smaller format JPG file for faster download and processing. The notebooks will be updated to reflect this change in data source. 
 
-### Original Dataset
+### Accessing original Dataset
 
-
-Accessing FTP
-
-- ftpib
+**ftplib**
 
 
 
