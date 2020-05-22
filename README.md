@@ -135,9 +135,13 @@ This project uses 749 images, 15 classes from the NIH drug image dataset. The im
 ### Original Dataset
 
 how many NDCS
+
 how many images per NDC
+
 how many manufacturers
+
 cannot easily distinguish # of drugs
+
 image types
 
 110 folders, no clear arrangement
