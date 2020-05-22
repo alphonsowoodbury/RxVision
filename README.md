@@ -105,7 +105,6 @@ Ideally, the app implementation of this model would be localized to the smartpho
 
 Pharmacies invest thousands and millions into their processes and techology stacks to ensure each order is filled accurately per the prescription and received by the designated patient or caregiver. Despite these efforts, medication errors still occur. Payroll hours have continued to drop due to increased competition and pharmacists find themselves taking on more administrative and retail tasks than they had previously, without the help of as many technicians. These pharmacists are under more stress to maintain safety and operate a profitable business, and this leads to fatigue and burnout, which leads to errors. A prescription released to the wrong patient or with the wrong drug is embarrassing, costly, and dangerous.
 
-In regards to cost, it should be 
 
 ##### Recommendation: Dispensing Validation
 
@@ -119,7 +118,7 @@ During medical emergencies, EMTs and nurses must work quickly to gather informat
  
 ##### Recommendation: Emergency Intervention
 
-If a collection of unsorted medications is found or provided, RxID could give insight into a patients condition, even if the medication is
+
 
 ### Pill Identification
 
