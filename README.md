@@ -127,6 +127,7 @@ This project uses 749 images, 15 classes from the NIH drug image dataset. The im
 ### Classes
 
 ![classes.jpg](https://github.com/a-woodbury/RxID/blob/master/Images/classes.jpg)
+![classes-5.jpg](https://github.com/a-woodbury/RxID/blob/master/Images/classes-5.jpg)
 
 **Reproduction:** The code needed to request and download images from the NIH server are in the [Data Collection]() notebook. Additional information on this process can be found in the [Recreating the Model Guide]().
 
