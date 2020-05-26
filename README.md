@@ -12,6 +12,8 @@ Using the MobileDeepPill model as a benchmark, we aim to initially achieve 50% a
 
 Current Validation Accuracy: **93%**
 
+Real World Accuracy: **Pending%**
+
 ### Repository Navigation
 <pre>
 Technical Notebook : <a href=Link>Technical Notebook </a>
