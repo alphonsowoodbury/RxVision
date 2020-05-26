@@ -63,7 +63,9 @@ The FDA provides guidance for defining, monitoring, and enforcing practices to r
 
 <p align="center">
    <img src=https://github.com/a-woodbury/RxVision/blob/master/Images/ADE.png title="ADE venn" alt="Fig.1 - Medication Errors and Adverse Events."/>
+<div align="center">
    <figcaption>Fig.1 - Medication Errors and Adverse Events.</figcaption>
+</div>
 </p>
 
 
