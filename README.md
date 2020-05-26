@@ -10,7 +10,7 @@ Using the MobileDeepPill model as a benchmark, we aim to initially achieve 50% a
 
 **Model Results:**
 
-Baseline : 51%    |     Final    : 76% 
+Current Validation Accuracy: **93%**
 
 ### Repository Navigation
 <pre>
