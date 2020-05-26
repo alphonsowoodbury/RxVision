@@ -1,4 +1,4 @@
-![RxVision_spash.jpg](https://github.com/a-woodbury/RxVision/blob/master/Images/RxVision_spash.jpg)
+![RxVision_spash2.jpg](https://github.com/a-woodbury/RxVision/blob/master/Images/RxVision_spash2.jpg)
 
 **Increasing Medication Safety with Deep Learning Image Recognition**
 
