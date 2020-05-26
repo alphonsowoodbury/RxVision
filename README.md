@@ -64,7 +64,7 @@ The FDA provides guidance for defining, monitoring, and enforcing practices to r
 <p align="center">
    <img src=https://github.com/a-woodbury/RxVision/blob/master/Images/ADE.png title="ADE venn"/>
    <figcaption>Fig.1 - Medication Errors and Adverse Events.</figcaption>
-</p>	</p>
+</p>
 
 
 When an ADE is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs are caused by medication error, and not all medication errors lead to an ADE or ADR. RxVision is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to:
