@@ -4,7 +4,7 @@
 
 ### Overview
 
-Despite increases in healthcare spending and tremendous advances in technology in the last several decades, medication errors and injury/morbity from errors have continued to increase. The abuse of opiods have certainly contributed to mortality from medication overdoses, but the vast majority of Adverse Drug Events occur from patients taking medications as prescribed. The RxID project attempts to use deep learning in an image recognition model to identify medications and propose deployment solutions to reduce the risk and occurence of medication error, and, ultimately, the human and financial cost of an Adverse Medical Reaction.
+Despite increases in healthcare spending and tremendous advances in technology in the last several decades, medication errors and injury/morbity from errors have continued to increase. The abuse of opiods have certainly contributed to mortality from medication overdoses, but the vast majority of Adverse Drug Events occur from patients taking medications as prescribed. The RxVision project attempts to use deep learning in an image recognition model to identify medications and propose deployment solutions to reduce the risk and occurence of medication error, and, ultimately, the human and financial cost of an Adverse Medical Reaction.
 
 Using the MobileDeepPill model as a benchmark, we aim to initially achieve 50% accuracy and work towards the 97% the MDP team reached. 
 
@@ -15,22 +15,22 @@ Baseline : 51%    |     Final    : 76%
 ### Repository Navigation
 <pre>
 Technical Notebook : <a href=Link>Technical Notebook </a>
-Other Notebooks    : <a href=https://github.com/a-woodbury/RxID/blob/master/RxID15_Modeling.ipynb>Modeling</a>, <a href=https://github.com/a-woodbury/RxID/blob/master/RxID15_Data_Collection.ipynb>Data Collection Notebook </a>
+Other Notebooks    : <a href=https://github.com/a-woodbury/RxVision/blob/master/RxVision_Modeling.ipynb>Modeling</a>, <a href=https://github.com/a-woodbury/RxVision/blob/master/RRxVision_Data_Collection.ipynb>Data Collection Notebook </a>
 Dataset Links      : <a href=https://www.nlm.nih.gov/databases/download/pill_image.html>NIH RxImage Portal</a>, <a href=Link>GCP Bucket</a>
-Presentation       : <a href=https://github.com/a-woodbury/RxID/blob/master/Presentation/RxID.pdf>Slide Deck</a>, <a href=https://docs.google.com/presentation/d/1f2bLza9GFhIXUAMudNsb00RTpHAwg5JegGIw2i2Jg8A/edit?usp=sharing>Google Slides</a>
+Presentation       : <a href=https://github.com/a-woodbury/RxVision/blob/master/Presentation/RxVision.pdf>Slide Deck</a>, <a href=https://docs.google.com/presentation/d/1f2bLza9GFhIXUAMudNsb00RTpHAwg5JegGIw2i2Jg8A/edit?usp=sharing>Google Slides</a>
 Other              : <a href=Link>Recreating the Model Guide</a>, <a href=Link>Drug Classes</a>
 </pre>
 
 ### ReadME Navigation
 
-[Problem](https://github.com/a-woodbury/RxID/blob/master/README.md#problem) - 
-[Data](https://github.com/a-woodbury/RxID#data) -
-[Model](https://github.com/a-woodbury/RxID#model) -
-[Results](https://github.com/a-woodbury/RxID#results) - 
-[Recommendations](https://github.com/a-woodbury/RxID#recommendations) - 
-[Future](https://github.com/a-woodbury/RxID#future) - 
-[Project Info](https://github.com/a-woodbury/RxID#project-info) -
-[Works Cited](https://github.com/a-woodbury/RxID#works-cited)
+[Problem](https://github.com/a-woodbury/RxVision/blob/master/README.md#problem) - 
+[Data](https://github.com/a-woodbury/RxVision#data) -
+[Model](https://github.com/a-woodbury/RxVision#model) -
+[Results](https://github.com/a-woodbury/RxVision#results) - 
+[Recommendations](https://github.com/a-woodbury/RxVision#recommendations) - 
+[Future](https://github.com/a-woodbury/RxVision#future) - 
+[Project Info](https://github.com/a-woodbury/RxVision#project-info) -
+[Works Cited](https://github.com/a-woodbury/RxVision#works-cited)
 
 ## Problem
 
@@ -60,14 +60,14 @@ The FDA provides guidance for defining, monitoring, and enforcing practices to r
 > **Adverse Medical Reaction (ADR):** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
 
 <p align="center">
-   <img src=https://github.com/a-woodbury/RxID/blob/master/Images/ADE.png title="ADE venn"/>
+   <img src=https://github.com/a-woodbury/RxVision/blob/master/Images/ADE.png title="ADE venn"/>
    <figcaption>Fig.1 - Medication Errors and Adverse Events.</figcaption>
 </p>	</p>
 
 
-When an ADE is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs are caused by medication error, and not all medication errors lead to an ADE or ADR. RxID is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to:
+When an ADE is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs are caused by medication error, and not all medication errors lead to an ADE or ADR. RxVision is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to:
 
-- Guide drug developers and manufacturers provide clearer reporting on drug ingredients, labeling, and manufacturing (not in scope of RxID);
+- Guide drug developers and manufacturers provide clearer reporting on drug ingredients, labeling, and manufacturing (not in scope of RxVision);
 - Help pharmacies reduce errors in dispensing and releasing medications;
 - Assist patients in understanding the therapy and complications of their medicines.
 
@@ -128,7 +128,7 @@ We have identified projects and competitions challenging computer engineering te
 
 ## Data
 
-This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxID/blob/master/Images/classes-5.jpg) from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository.
+This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxVision/blob/master/Images/classes-5.jpg) from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository.
 
 **visuals pending**
 
@@ -141,7 +141,7 @@ This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxID/b
 - therapeutic classes
 
 
-![classes.jpg](https://github.com/a-woodbury/RxID/blob/master/Images/classes.jpg)
+![classes.jpg](https://github.com/a-woodbury/RxVision/blob/master/Images/classes.jpg)
 
 **Reproduction:** The code needed to request and download images from the NIH server are in the [Data Collection]() notebook. Additional information on this process can be found in the [Recreating the Model Guide]().
 
@@ -159,7 +159,7 @@ This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxID/b
 
 **Baseline Confusion Matrix**
 
-![model1-baseline_conf.png](https://github.com/a-woodbury/RxID/blob/master/Images/model1-baseline_conf.png)
+![model1-baseline_conf.png](https://github.com/a-woodbury/RxVision/blob/master/Images/model1-baseline_conf.png)
 
 ### Improving the current model
 
@@ -167,10 +167,10 @@ This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxID/b
 
 ## Future
 
-![RxID%Future.png](https://github.com/a-woodbury/RxID/blob/master/Images/RxID%20Future.png)
+![RxVision%Future.png](https://github.com/a-woodbury/RxVision/blob/master/Images/RxVision%20Future.png)
 
 ### More Medications
-Once the model accuracy is above ??%, I would like to use RxID15 to transfer learning to models for more medications
+Once the model accuracy is above ??%, I would like to use RxVision to transfer learning to models for more medications
 
 ### More Needs
 I have a vision of the model serving many diverse groups of patients, including those addicted to opioids. To help opiod users avoid ingesting contaminated medications, I would like to make a model for distinguishing authentic from counterfeit medications. 
