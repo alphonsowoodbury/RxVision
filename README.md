@@ -10,7 +10,9 @@ Using the MobileDeepPill model as a benchmark, we aim to initially achieve 50% a
 
 **Model Results:**
 
-Baseline : 51%    |     Final    : 76% 
+Current Validation Accuracy: **93%**
+
+Real World Accuracy: **Pending**
 
 ### Repository Navigation
 <pre>
@@ -60,9 +62,11 @@ The FDA provides guidance for defining, monitoring, and enforcing practices to r
 > **Adverse Medical Reaction (ADR):** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
 
 <p align="center">
-   <img src=https://github.com/a-woodbury/RxVision/blob/master/Images/ADE.png title="ADE venn"/>
+   <img src=https://github.com/a-woodbury/RxVision/blob/master/Images/ADE.png title="ADE venn" alt="Fig.1 - Medication Errors and Adverse Events."/>
+<div align="center">
    <figcaption>Fig.1 - Medication Errors and Adverse Events.</figcaption>
-</p>	</p>
+</div>
+</p>
 
 
 When an ADE is identified, the course of action is clinical intervention with the patient and, if occurring in a clinical setting, reporting and correction action with the offending agency. However, as seen in the above graphic, not all ADEs are caused by medication error, and not all medication errors lead to an ADE or ADR. RxVision is certainly not the first pursuit of improvement in medication safety; the FDA has rolled out programs, regulations, and research to:
