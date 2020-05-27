@@ -16,7 +16,7 @@ Real World Accuracy: **Pending**
 
 ### Repository Navigation
 <pre>
-Technical Notebook : <a href=Link>Technical Notebook </a>
+Technical Notebook : <a href=https://github.com/a-woodbury/RxVision/blob/master/Notebooks/RxVision_Technical_Notebook.ipynb>Technical Notebook </a>
 Other Notebooks    : <a href=https://github.com/a-woodbury/RxVision/blob/master/RxVision_Modeling.ipynb>Modeling</a>, <a href=https://github.com/a-woodbury/RxVision/blob/master/RRxVision_Data_Collection.ipynb>Data Collection Notebook </a>
 Dataset Links      : <a href=https://www.nlm.nih.gov/databases/download/pill_image.html>NIH RxImage Portal</a>, <a href=Link>GCP Bucket</a>
 Presentation       : <a href=https://github.com/a-woodbury/RxVision/blob/master/Presentation/RxVision.pdf>Slide Deck</a>, <a href=https://docs.google.com/presentation/d/1f2bLza9GFhIXUAMudNsb00RTpHAwg5JegGIw2i2Jg8A/edit?usp=sharing>Google Slides</a>
