@@ -125,6 +125,10 @@ The images for training were acquired from the NIH National Library of Medicine'
 
 ![NDCs_%20Frequency%20of%20Image%20Counts-2.png](https://github.com/a-woodbury/RxVision/blob/master/Images/NDCs_%20Frequency%20of%20Image%20Counts-2.png) ![File%20Types.png](https://github.com/a-woodbury/RxVision/blob/master/Images/File%20Types.png)
 
+<p align="center">
+   <img src=https://github.com/a-woodbury/RxVision/blob/master/Images/Image%20Types.png/>
+</p>
+
  ![Image%20Types.png](https://github.com/a-woodbury/RxVision/blob/master/Images/Image%20Types.png)
 
 **Dataset:**
