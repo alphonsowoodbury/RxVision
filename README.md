@@ -129,7 +129,6 @@ The images for training were acquired from the NIH National Library of Medicine'
    <img src=https://github.com/a-woodbury/RxVision/blob/master/Images/Image%20Types.png/>
 </p>
 
- ![Image%20Types.png](https://github.com/a-woodbury/RxVision/blob/master/Images/Image%20Types.png)
 
 **Dataset:**
 
