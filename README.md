@@ -166,7 +166,7 @@ RxVision uses VGG16 to boost accuracy from training, however the real-world resu
 Once the real-world accuracy is above 90%, I would like to use RxVision to transfer learning to models for more medications
 
 ### More Needs
-I have a vision of the model serving many diverse groups of patients, including those addicted to opioids. To help opiod users avoid ingesting contaminated medications, I would like to make a model for distinguishing authentic from counterfeit medications. 
+I have a vision of the model serving many diverse groups of patients, including those addicted to opioids. To help opioid users avoid ingesting contaminated medications, I would like to make a model for distinguishing authentic from counterfeit medications. 
 
 A fascinating project in South Korea aimed to use image recognition on street recreational tablets with unique presses. Athough the constiution of such a drug could not be validated via image recognition, it could assist recreation drug users in avoid detrimental effects of potentialy tainted products. 
 
