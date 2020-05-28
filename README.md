@@ -206,3 +206,10 @@ Application  : Image Recognition, Image Classification
 </pre>
 
 ## Works Cited
+
+1. https://www.hopkinsmedicine.org/news/media/releases/study_suggests_medical_errors_now_third_leading_cause_of_death_in_the_us 
+2. https://www.atrainceu.com/content/3-types-medical-errors
+3. https://www.fda.gov/drugs/drug-information-consumers/working-reduce-medication-errors
+4. https://apps.who.int/iris/bitstream/handle/10665/252274/9789241511643-eng.pdf;jsessionid=BEA247A75DD2B5E427B5B75456948756?sequence=1
+5. https://www.who.int/bulletin/volumes/88/4/10-020410/en/
+
