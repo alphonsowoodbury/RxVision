@@ -171,7 +171,7 @@ This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxVisi
 
 ## Future
 
-![RxVision%Future.png](https://github.com/a-woodbury/RxVision/blob/master/Images/RxVision%20Future.png)
+![RxVision%Future.png](https://github.com/a-woodbury/RxVision/blob/master/Images/RxID%20Future.png)
 
 ### More Medications
 Once the real-world accuracy is above 90%, I would like to use RxVision to transfer learning to models for more medications
