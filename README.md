@@ -123,28 +123,18 @@ We have identified projects and competitions challenging computer engineering te
 
 The images for training were acquired from the NIH National Library of Medicine's FTP server; a python 3.X package ftplib was used to iterate through the folders using the provided directory flat file. 
 
-**visuals pending**
+**Dataset:**
 
-- how many NDCS
-- how many images per NDC
-- how many manufacturers
-- cannot easily distinguish # of drugs
-- image types
-- 110 folders, no clear arrangement
-- therapeutic classes
+- Total Images: 131,271
+- Drug Classes: 4,864
+
+**RxVision:**
+
+- Total Images: 490
+- Drug Classes: 15
 
 
 ![classes.jpg](https://github.com/a-woodbury/RxVision/blob/master/Images/classes-17.jpg)
-
-**Reproduction:** The code needed to request and download images from the NIH server are in the [Data Collection]() notebook. Additional information on this process can be found in the [Recreating the Model Guide]().
-
-***Note:*** In the near future, the NIH dataset will be available from Google Cloud Platform. Videos and corrupt files will be excluded, and all files will be in a smaller format JPG file for faster download and processing. The notebooks will be updated to reflect this change in data source. 
-
-### Accessing original Dataset
-
-**ftplib**
-
-
 
 ## Model
 
