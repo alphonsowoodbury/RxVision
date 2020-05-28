@@ -132,7 +132,7 @@ We have identified projects and competitions challenging computer engineering te
 
 ## Data
 
-This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxVision/blob/master/Images/classes-5.jpg) from the NIH drug image dataset. The images are stored on an FTP server and can be queried and downloaded using the Data Collection notebook in this repository.
+The images for training were acquired from the NIH National Library of Medicine's FTP server; a python 3.X package ftplib was used to iterate through the folders using the provided directory flat file. 
 
 **visuals pending**
 
