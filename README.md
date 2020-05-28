@@ -145,7 +145,7 @@ This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxVisi
 - therapeutic classes
 
 
-![classes.jpg](https://github.com/a-woodbury/RxVision/blob/master/Images/classes_17.jpg)
+![classes.jpg](https://github.com/a-woodbury/RxVision/blob/master/Images/classes-17.jpg)
 
 **Reproduction:** The code needed to request and download images from the NIH server are in the [Data Collection]() notebook. Additional information on this process can be found in the [Recreating the Model Guide]().
 
