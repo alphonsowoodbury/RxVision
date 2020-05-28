@@ -121,7 +121,7 @@ We have identified projects and competitions challenging computer engineering te
 
 ## Data
 
-The images for training were acquired from the NIH National Library of Medicine's FTP server; a python 3.X package ftplib was used to iterate through the folders using the provided directory flat file. 
+The images for training were acquired from the NIH National Library of Medicine's [FTP server](https://www.nlm.nih.gov/databases/download/pill_image.html); a python 3.X package ftplib was used to iterate through the folders using the provided directory flat file. 
 
 ![NDCs_%20Frequency%20of%20Image%20Counts-2.png](https://github.com/a-woodbury/RxVision/blob/master/Images/NDCs_%20Frequency%20of%20Image%20Counts-2.png) ![File%20Types.png](https://github.com/a-woodbury/RxVision/blob/master/Images/File%20Types.png)
 
