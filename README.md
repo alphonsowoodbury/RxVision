@@ -127,6 +127,7 @@ The images for training were acquired from the NIH National Library of Medicine'
 
 - Total Images: 131,271
 - Drug Classes: 4,864
+- Most Common Drug Image: Levothyroxine
 
 **RxVision:**
 
