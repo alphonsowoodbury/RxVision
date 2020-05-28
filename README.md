@@ -8,7 +8,7 @@ Despite increases in healthcare spending and tremendous advances in technology i
 
 Using the MobileDeepPill model as a benchmark, we aim to initially achieve 50% accuracy and work towards the 97% the MDP team reached. 
 
-**Model Results as of 5/28/20:**
+Model Results as of 5/28/20:
 
 Validation Accuracy: **93%**
 
