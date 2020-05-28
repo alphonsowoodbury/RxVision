@@ -174,7 +174,7 @@ This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxVisi
 ![RxVision%Future.png](https://github.com/a-woodbury/RxVision/blob/master/Images/RxVision%20Future.png)
 
 ### More Medications
-Once the model accuracy is above ??%, I would like to use RxVision to transfer learning to models for more medications
+Once the real-world accuracy is above 90%, I would like to use RxVision to transfer learning to models for more medications
 
 ### More Needs
 I have a vision of the model serving many diverse groups of patients, including those addicted to opioids. To help opiod users avoid ingesting contaminated medications, I would like to make a model for distinguishing authentic from counterfeit medications. 
