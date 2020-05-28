@@ -123,6 +123,8 @@ We have identified projects and competitions challenging computer engineering te
 
 The images for training were acquired from the NIH National Library of Medicine's FTP server; a python 3.X package ftplib was used to iterate through the folders using the provided directory flat file. 
 
+![File%20Types.png](https://github.com/a-woodbury/RxVision/blob/master/Images/File%20Types.png) ![Image%20Types.png](https://github.com/a-woodbury/RxVision/blob/master/Images/Image%20Types.png)
+
 **Dataset:**
 
 - Total Images: 131,271
