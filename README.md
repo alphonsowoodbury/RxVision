@@ -42,17 +42,6 @@ These data are skewed when chronic, costly conditions are considered. Having mul
 
 When considering this growth, it becomes more clear why medical/medication error would be identified as the third leading cause of death in the US in 2016. As patients take more medications and drugs become more potent and complex, the risk of interactions, side effects, and errors increase as well. 
 
-Medication errors also have a financial toll. In response to these errors that lead to heath deficiency or death, malpractice suits have grown to account for 5% of...   The average cost of an ADE is $2,257 (FDA 2004).
-Adverse drug events cost the United States $37.6 billion each year, and approximately $17 billion of these costs are associated with preventable errors (Source: “To Error is Human: Building a Safer Health System,” a November 1999 report from the Institute of Medicine [IOM]).
-The extra medical costs of treating drug-related injuries occurring in hospitals alone conservatively amount to $3.5 billion a year. This estimate does not take into account lost wages and productivity or additional healthcare costs (Source: “Preventing Medication Errors: Quality Chasm Series,” a July 2006 report from the IOM).
-
-Medication errors are the source of 5% of malpractice claims (Byron J. Bailey. “Medical Liability Issues: Where Malpractice Claims Come From and How to Survive Them,” July 2002).
-The average jury award for medication error cases is $636,844 (Jury Verdict Research, “2000 Current Award Trends in Personal Injury,” June 2001).
-
-
-
-
-
 The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medication errors. 
 
 > **Medication Error:** Any preventable event that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the healthcare professional, patient, or consumer.
@@ -220,3 +209,10 @@ Application  : Image Recognition, Image Classification
 11. [A Similar Pill ID Project from Indiana University](http://vision.soic.indiana.edu/b657/sp2016/projects/ctay/poster.pdf)
 12. [Automatic Drug image identification](http://www.ijicic.org/ijicic-11-01017.pdf)
 13. [NLM RxImage API](https://rxnav.nlm.nih.gov/RxImageAPIs.html#)
+
+Medication errors also have a financial toll. In response to these errors that lead to heath deficiency or death, malpractice suits have grown to account for 5% of...   The average cost of an ADE is $2,257 (FDA 2004).
+Adverse drug events cost the United States $37.6 billion each year, and approximately $17 billion of these costs are associated with preventable errors (Source: “To Error is Human: Building a Safer Health System,” a November 1999 report from the Institute of Medicine [IOM]).
+The extra medical costs of treating drug-related injuries occurring in hospitals alone conservatively amount to $3.5 billion a year. This estimate does not take into account lost wages and productivity or additional healthcare costs (Source: “Preventing Medication Errors: Quality Chasm Series,” a July 2006 report from the IOM).
+
+Medication errors are the source of 5% of malpractice claims (Byron J. Bailey. “Medical Liability Issues: Where Malpractice Claims Come From and How to Survive Them,” July 2002).
+The average jury award for medication error cases is $636,844 (Jury Verdict Research, “2000 Current Award Trends in Personal Injury,” June 2001).
