@@ -215,9 +215,8 @@ Application  : Image Recognition, Image Classification
 6. [Aging USA](https://www.prb.org/aging-unitedstates-fact-sheet/)
 7. [Adverse Drug Events](https://www.nccmerp.org/sites/default/files/nccmerp_fact_sheet_2015-02-v91.pdf)
 8. [CDC: Chronic Diseases](https://www.cdc.gov/chronicdisease/resources/infographic/chronic-diseases.htm)
-9/ [Pill Image Recognition Challenge (2016)](https://pir.nlm.nih.gov/challenge/submission.html)
+9. [Pill Image Recognition Challenge (2016)](https://pir.nlm.nih.gov/challenge/submission.html)
 10. [Reducing Medication Errors in Pediatrics](https://jamanetwork.com/journals/jamapediatrics/fullarticle/191018)
 11. [A Similar Pill ID Project from Indiana University](http://vision.soic.indiana.edu/b657/sp2016/projects/ctay/poster.pdf)
 12. [Automatic Drug image identification](http://www.ijicic.org/ijicic-11-01017.pdf)
 13. [NLM RxImage API](https://rxnav.nlm.nih.gov/RxImageAPIs.html#)
-14. 
