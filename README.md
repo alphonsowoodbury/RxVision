@@ -208,10 +208,10 @@ Application  : Image Recognition, Image Classification
 ## Works Cited
 
 1. [Hopkins: Medical error third leading cause of death](https://www.hopkinsmedicine.org/news/media/releases/study_suggests_medical_errors_now_third_leading_cause_of_death_in_the_us)
-2. https://www.atrainceu.com/content/3-types-medical-errors
-3. https://www.fda.gov/drugs/drug-information-consumers/working-reduce-medication-errors
-4. https://apps.who.int/iris/bitstream/handle/10665/252274/9789241511643-eng.pdf;jsessionid=BEA247A75DD2B5E427B5B75456948756?sequence=1
-5. https://www.who.int/bulletin/volumes/88/4/10-020410/en/
+2. [3 Types of Medical Errors](https://www.atrainceu.com/content/3-types-medical-errors)
+3. [FDA: Reducing medical Errors](https://www.fda.gov/drugs/drug-information-consumers/working-reduce-medication-errors
+4. [WHO: Medication Errors](https://apps.who.int/iris/bitstream/handle/10665/252274/9789241511643-eng.pdf;jsessionid=BEA247A75DD2B5E427B5B75456948756?sequence=1
+5. [WHO: Growing Threat from counterfeit medications](https://www.who.int/bulletin/volumes/88/4/10-020410/en/
 6. https://www.prb.org/aging-unitedstates-fact-sheet/
 7. [](https://www.nccmerp.org/sites/default/files/nccmerp_fact_sheet_2015-02-v91.pdf)
 8. [](https://github.com/HHS/pillbox_docs/wiki/Data-issues,-errors,-and-discrepancies)
