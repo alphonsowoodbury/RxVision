@@ -209,16 +209,15 @@ Application  : Image Recognition, Image Classification
 
 1. [Hopkins: Medical error third leading cause of death](https://www.hopkinsmedicine.org/news/media/releases/study_suggests_medical_errors_now_third_leading_cause_of_death_in_the_us)
 2. [3 Types of Medical Errors](https://www.atrainceu.com/content/3-types-medical-errors)
-3. [FDA: Reducing medical Errors](https://www.fda.gov/drugs/drug-information-consumers/working-reduce-medication-errors
-4. [WHO: Medication Errors](https://apps.who.int/iris/bitstream/handle/10665/252274/9789241511643-eng.pdf;jsessionid=BEA247A75DD2B5E427B5B75456948756?sequence=1
-5. [WHO: Growing Threat from counterfeit medications](https://www.who.int/bulletin/volumes/88/4/10-020410/en/
-6. https://www.prb.org/aging-unitedstates-fact-sheet/
-7. [](https://www.nccmerp.org/sites/default/files/nccmerp_fact_sheet_2015-02-v91.pdf)
-8. [](https://github.com/HHS/pillbox_docs/wiki/Data-issues,-errors,-and-discrepancies)
-9/ [](https://pir.nlm.nih.gov/challenge/submission.html)
-10. [] (https://jamanetwork.com/journals/jamapediatrics/fullarticle/191018)
-11. [] (http://vision.soic.indiana.edu/b657/sp2016/projects/ctay/poster.pdf)
-12. [] (http://www.ijicic.org/ijicic-11-01017.pdf)
-13. [] (https://rxnav.nlm.nih.gov/RxImageAPIs.html#)
-14. [] (https://www.cdc.gov/chronicdisease/resources/infographic/chronic-diseases.htm)
-
+3. [FDA: Reducing medical Errors](https://www.fda.gov/drugs/drug-information-consumers/working-reduce-medication-errors)
+4. [WHO: Medication Errors](https://apps.who.int/iris/bitstream/handle/10665/252274/9789241511643-eng.pdf;jsessionid=BEA247A75DD2B5E427B5B75456948756?sequence=1)
+5. [WHO: Growing Threat from counterfeit medications](https://www.who.int/bulletin/volumes/88/4/10-020410/en/)
+6. [Aging USA](https://www.prb.org/aging-unitedstates-fact-sheet/)
+7. [Adverse Drug Events](https://www.nccmerp.org/sites/default/files/nccmerp_fact_sheet_2015-02-v91.pdf)
+8. [CDC: Chronic Diseases](https://www.cdc.gov/chronicdisease/resources/infographic/chronic-diseases.htm)
+9/ [Pill Image Recognition Challenge (2016)](https://pir.nlm.nih.gov/challenge/submission.html)
+10. [Reducing Medication Errors in Pediatrics](https://jamanetwork.com/journals/jamapediatrics/fullarticle/191018)
+11. [A Similar Pill ID Project from Indiana University](http://vision.soic.indiana.edu/b657/sp2016/projects/ctay/poster.pdf)
+12. [Automatic Drug image identification](http://www.ijicic.org/ijicic-11-01017.pdf)
+13. [NLM RxImage API](https://rxnav.nlm.nih.gov/RxImageAPIs.html#)
+14. 
