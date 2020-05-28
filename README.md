@@ -167,7 +167,7 @@ This project uses 749 images, [15 classesg](https://github.com/a-woodbury/RxVisi
 
 ### Improving the current model
 
-## Recommendations:
+RxVision uses VGG16 to boost accuracy from training, however the real-world results do not reflect the validation accuracy. This means more images and more image augementation is required. 
 
 ## Future
 
