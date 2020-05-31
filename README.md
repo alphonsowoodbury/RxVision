@@ -146,11 +146,15 @@ The images for training were acquired from the NIH National Library of Medicine'
 
 ## Model
 
+The most successful model was a convolutional neural network boosted with transfer learning, using VGG16 as the foundation. 
+
+
+
 ## Results
 
-**Baseline Confusion Matrix**
 
-![model1-baseline_conf.png](https://github.com/a-woodbury/RxVision/blob/master/Images/model1-baseline_conf.png)
+
+
 
 ### Improving the current model
 
