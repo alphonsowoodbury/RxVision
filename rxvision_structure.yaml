@@ -1,0 +1,62 @@
+RxVision:
+  infrastructure:
+    files:
+      - eks.tf
+      - gke.tf
+      - s3_minio.tf
+      - rds_postgres.tf
+      - networking.tf
+      - outputs.tf
+      - variables.tf
+      - main.tf
+      - terraform.tfvars
+      - backend.tf
+  kubernetes:
+    namespaces:
+      files:
+        - training.yaml
+        - inference.yaml
+        - monitoring.yaml
+    helm:
+      mlflow: {}
+      postgres: {}
+      minio: {}
+      prometheus-grafana: {}
+    deployments:
+      files:
+        - kserve.yaml
+        - kubeflow-pipeline.yaml
+        - fastapi-inference.yaml
+  src:
+    training:
+      files:
+        - pipeline.py
+        - data_preprocessing.py
+        - model_training.py
+        - model_evaluation.py
+        - requirements.txt
+    inference:
+      files:
+        - api.py
+        - model_loader.py
+        - inference.py
+  notebooks: {}
+  tests:
+    files:
+      - test_training.py
+      - test_inference.py
+  ci-cd:
+    github-actions:
+      files:
+        - train-model.yml
+        - deploy-inference.yml
+        - terraform-apply.yml
+  configs:
+    files:
+      - dev.yaml
+      - prod.yaml
+  files:
+    - README.md
+    - Dockerfile
+    - .gitignore
+    - Makefile

@@ -1,0 +1,22 @@
+tap "homebrew/cask"
+
+# Kubernetes & Containerization (Only Needed Locally)
+cask "docker"       # Container runtime
+brew "minikube"     # Lightweight local Kubernetes
+brew "kubectl"      # CLI for Kubernetes management
+brew "helm"         # Kubernetes package manager
+brew "colima"       # Alternative to Minikube (optional)
+
+# Cloud SDKs (For Managing AWS/GCP Infra)
+brew "awscli"           # AWS CLI for EKS, S3, IAM
+cask "google-cloud-sdk" # GCP CLI for GKE, Cloud Storage
+brew "azure-cli"        # Azure CLI (if using AKS)
+
+# Infrastructure as Code (IaC)
+brew "terraform"  # HashiCorp Terraform for infra management
+brew "ansible"    # Configuration management and orchestration
+
+# Miscellaneous CLI Tools (Useful for Kubernetes & ML)
+brew "jq"      # JSON processing (useful for Kubernetes configs)
+brew "yq"      # YAML processing (useful for Helm/K8s)
+brew "htop"    # System monitoring

@@ -1,0 +1,66 @@
+---
+- name: Create RxVision Project Structure
+  hosts: localhost
+  tasks:
+    - name: Ensure directories and subdirectories exist
+      file:
+        path: "{{ item }}"
+        state: directory
+      loop:
+        - "./ci-cd"
+        - "./configs"
+        - "./infrastructure"
+        - "./kubernetes/namespaces"
+        - "./kubernetes/helm"
+        - "./kubernetes/deployments"
+        - "./src/training"
+        - "./src/inference"
+        - "./tests"
+        - "./notebooks"
+
+    - name: Create empty files in the root directory
+      copy:
+        dest: "{{ item }}"
+        content: ""
+      loop:
+        - "./README.md"
+        - "./Dockerfile"
+        - "./Makefile"
+        - "./.gitignore"
+
+    - name: Create empty files in subdirectories
+      copy:
+        dest: "{{ item.path }}"
+        content: ""
+      loop:
+        - path: "./ci-cd/github-actions/train-model.yml"
+        - path: "./ci-cd/github-actions/deploy-inference.yml"
+        - path: "./ci-cd/github-actions/terraform-apply.yml"
+        - path: "./configs/dev.yaml"
+        - path: "./configs/prod.yaml"
+        - path: "./infrastructure/eks.tf"
+        - path: "./infrastructure/gke.tf"
+        - path: "./infrastructure/s3_minio.tf"
+        - path: "./infrastructure/rds_postgres.tf"
+        - path: "./infrastructure/networking.tf"
+        - path: "./infrastructure/outputs.tf"
+        - path: "./infrastructure/variables.tf"
+        - path: "./infrastructure/main.tf"
+        - path: "./infrastructure/terraform.tfvars"
+        - path: "./infrastructure/backend.tf"
+        - path: "./kubernetes/namespaces/training.yaml"
+        - path: "./kubernetes/namespaces/inference.yaml"
+        - path: "./kubernetes/namespaces/monitoring.yaml"
+        - path: "./kubernetes/deployments/kserve.yaml"
+        - path: "./kubernetes/deployments/kubeflow-pipeline.yaml"
+        - path: "./kubernetes/deployments/fastapi-inference.yaml"
+        - path: "./src/training/pipeline.py"
+        - path: "./src/training/data_preprocessing.py"
+        - path: "./src/training/model_training.py"
+        - path: "./src/training/model_evaluation.py"
+        - path: "./src/training/requirements.txt"
+        - path: "./src/inference/api.py"
+        - path: "./src/inference/model_loader.py"
+        - path: "./src/inference/inference.py"
+        - path: "./tests/test_training.py"
+        - path: "./tests/test_inference.py"

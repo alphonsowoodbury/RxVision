@@ -1,0 +1,7 @@
+pandas
+requests
+rawpy
+imageio
+pillow
+matplotlib
+ftplib
