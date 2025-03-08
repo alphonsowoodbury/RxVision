@@ -1,3 +1,83 @@
+# RxVision25
+
+Deep learning model for medication image classification.
+
+## Project Structure
+
+```
+.
+├── data/           # Training data
+│   ├── train/     # Training images by class
+│   └── val/       # Validation images by class (optional)
+├── models/        # Saved models and training logs
+├── src/          # Source code
+│   ├── data/     # Data processing utilities
+│   ├── models/   # Model architectures
+│   ├── training/ # Training scripts
+│   └── utils/    # Helper utilities
+├── v1/           # Original project reference
+└── requirements.txt
+```
+
+## Setup
+
+1. Create a Python environment:
+```bash
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Training Data:
+The training data is not included in this repository due to its size. You'll need to:
+- Download the dataset from the [NIH RxImage Portal](https://www.nlm.nih.gov/databases/download/pill_image.html)
+- Place the images in `data/train/` and `data/val/` directories following the structure shown below
+- Each class should be in its own subdirectory
+
+## Training
+
+1. Organize your training data:
+```
+data/
+├── train/
+│   ├── class1/
+│   │   ├── image1.jpg
+│   │   └── image2.jpg
+│   └── class2/
+│       ├── image3.jpg
+│       └── image4.jpg
+└── val/  # Optional
+    ├── class1/
+    └── class2/
+```
+
+2. Run training:
+```bash
+python src/training/train.py
+```
+
+Models and training logs will be saved in `models/` with timestamps.
+
+## Model Architecture
+
+Based on the best performing model from v1:
+- 4 convolutional blocks with increasing filters (768 → 1024 → 512 → 256)
+- Spatial and regular dropout for regularization
+- Gaussian noise for robustness
+- Dense softmax layer for classification
+
+## Data Augmentation
+
+- Rotation (±45°)
+- Width/height shifts (±20%)
+- Shear transformation
+- Zoom (±50%)
+- Horizontal and vertical flips
+
 ![RxVision_splash.jpg](https://github.com/a-woodbury/RxVision/blob/master/Images/RxVision_splash.jpg)
 
 **Increasing Medication Safety with Deep Learning Image Recognition**
@@ -71,7 +151,7 @@ Computerized prescription management, automated dispensing systems, and online p
 
 - **Physician or Pharmacy**
    - Give a patient the wrong dosage, unintentionally
-   - Fail to take a history of the patient’s prescription drug use
+   - Fail to take a history of the patient's prescription drug use
    - Fail to warn of all risks associated with the medication
    - Dangerously mixed different prescription drugs
    - administering the wrong dosage of medication (i.e., too much or too little medication)
@@ -214,10 +294,10 @@ Application  : Image Recognition, Image Classification
 
 Medication errors also have a financial toll. In response to these errors that lead to heath deficiency or death, malpractice suits have grown to account for 5% of...   The average cost of an ADE is $2,257 (FDA 2004).
 
-Adverse drug events cost the United States $37.6 billion each year, and approximately $17 billion of these costs are associated with preventable errors (Source: “To Error is Human: Building a Safer Health System,” a November 1999 report from the Institute of Medicine [IOM]).
+Adverse drug events cost the United States $37.6 billion each year, and approximately $17 billion of these costs are associated with preventable errors (Source: "To Error is Human: Building a Safer Health System," a November 1999 report from the Institute of Medicine [IOM]).
 
-The extra medical costs of treating drug-related injuries occurring in hospitals alone conservatively amount to $3.5 billion a year. This estimate does not take into account lost wages and productivity or additional healthcare costs (Source: “Preventing Medication Errors: Quality Chasm Series,” a July 2006 report from the IOM).
+The extra medical costs of treating drug-related injuries occurring in hospitals alone conservatively amount to $3.5 billion a year. This estimate does not take into account lost wages and productivity or additional healthcare costs (Source: "Preventing Medication Errors: Quality Chasm Series," a July 2006 report from the IOM).
 
-Medication errors are the source of 5% of malpractice claims (Byron J. Bailey. “Medical Liability Issues: Where Malpractice Claims Come From and How to Survive Them,” July 2002).
+Medication errors are the source of 5% of malpractice claims (Byron J. Bailey. "Medical Liability Issues: Where Malpractice Claims Come From and How to Survive Them," July 2002).
 
-The average jury award for medication error cases is $636,844 (Jury Verdict Research, “2000 Current Award Trends in Personal Injury,” June 2001).
+The average jury award for medication error cases is $636,844 (Jury Verdict Research, "2000 Current Award Trends in Personal Injury," June 2001).

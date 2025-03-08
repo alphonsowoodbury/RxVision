@@ -1,0 +1,44 @@
+# Core ML/DL
+tensorflow>=2.13.0
+tensorflow-metal  # M1/M2 GPU support
+numpy>=1.23.0
+scikit-learn>=1.0.0
+
+# Data processing
+pandas>=2.0.0
+Pillow>=10.0.0
+
+# Development
+jupyter>=1.0.0
+matplotlib>=3.7.0
+
+# API and dependencies
+fastapi==0.103.2  # Last version before typing-extensions 4.8 requirement
+uvicorn[standard]==0.23.2
+python-multipart==0.0.6
+httpx==0.24.1
+typing-extensions==4.5.0  # Compatible with both TF and FastAPI
+pydantic==1.10.13  # Last version before v2
+
+# Visualization
+seaborn==0.12.2
+
+# MLOps
+mlflow==2.8.0
+tensorboard==2.13.0
+
+# Utilities
+tqdm==4.65.0
+python-dotenv==1.0.0
+pyyaml==6.0.1
+aiofiles==23.2.1
+
+# Testing
+pytest==7.4.2
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+
+# Type checking
+mypy==1.5.1
+types-PyYAML==6.0.12.12
+types-requests==2.31.0.2
