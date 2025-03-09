@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "docs/**"
+      - "docs/wiki/**"
   repository_dispatch:
     types: [docs]
   workflow_dispatch:
