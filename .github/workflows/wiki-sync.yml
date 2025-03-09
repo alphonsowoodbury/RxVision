@@ -43,8 +43,8 @@ jobs:
       - name: Ensure Wiki Exists Before Syncing
         id: check_home
         run: |
-          if [ ! -f "docs/Home.md" ]; then
-            echo "Wiki Home.md does not exist in docs/, skipping sync."
+          if [ ! -f "docs/wiki/Home.md" ]; then
+            echo "Wiki Home.md does not exist in docs/wiki, skipping sync."
             exit 1
           fi
       - name: Create branch first
