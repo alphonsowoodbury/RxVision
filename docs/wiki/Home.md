@@ -1,4 +1,4 @@
-# RxVision Wiki2025.
+# RxVision Wiki
 
 Welcome to the RxVision technical wiki. This wiki contains comprehensive documentation about the project's architecture, development process, and technical decisions.
 
