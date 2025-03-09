@@ -1,98 +1,135 @@
 # ML Pipeline
 
-## System Overview
+## Pipeline Overview
 
-### Pipeline Architecture
 ```mermaid
 graph LR
-    A[Data Sources] --> B[Data Validation]
+    A[Raw Data] --> B[Data Validation]
     B --> C[Preprocessing]
-    C --> D[Feature Store]
-    D --> E[Training Pipeline]
-    E --> F[Model Registry]
-    F --> G[Serving Pipeline]
-    H[Monitoring] --> B & C & E & G
+    C --> D[Feature Engineering]
+    D --> E[Training]
+    E --> F[Evaluation]
+    F --> G[Model Registry]
+    G --> H[Deployment]
+    
+    style E fill:#f9f,stroke:#333
+    style G fill:#9cf,stroke:#333
+    style H fill:#9f9,stroke:#333
 ```
 
 ## Data Management
 
-### Data Versioning
-- DVC for dataset versioning
-- S3-compatible storage backend
-- Immutable data snapshots
-- Reproducible pipelines
-
-### Quality Controls
+### Dataset Structure
 ```python
-class DataValidator:
-    def validate_dataset(self, data_path: Path) -> ValidationResult:
-        """
-        Validates dataset against production criteria:
-        - Image resolution (224x224 minimum)
-        - Color space consistency (RGB)
-        - Class distribution (balanced within 20%)
-        - Corruption detection
-        """
-        metrics = self._compute_metrics(data_path)
-        return self._evaluate_criteria(metrics)
-```
-
-### Feature Pipeline
-```python
-@dataclass
-class ImagePreprocessor:
-    img_size: tuple[int, int] = (224, 224)
-    normalize: bool = True
-    augment: bool = True
+class RxVisionDataset(Dataset):
+    """Healthcare-grade image dataset with validation."""
     
-    def __post_init__(self):
-        self.transform = A.Compose([
-            A.RandomRotate90(p=0.5),
-            A.Flip(p=0.5),
-            A.ShiftScaleRotate(p=0.5),
-            A.Normalize() if self.normalize else A.NoOp(),
-            ToTensorV2(),
-        ])
+    def __init__(
+        self,
+        data_dir: Path,
+        transform: Optional[A.Compose] = None,
+        validation: bool = True
+    ):
+        self.data_dir = data_dir
+        self.transform = transform
+        self.samples = self._load_samples()
+        
+        if validation:
+            self._validate_dataset()
+    
+    def _validate_dataset(self) -> None:
+        """Validate dataset integrity and quality."""
+        for img_path, label in self.samples:
+            # Image validation
+            assert img_path.exists(), f"Missing image: {img_path}"
+            img = Image.open(img_path)
+            assert img.mode == "RGB", f"Invalid color mode: {img_path}"
+            
+            # Label validation
+            assert label in self.valid_labels, f"Invalid label: {label}"
 ```
 
-## Training Infrastructure
-
-### Distributed Training
+### Data Augmentation
 ```python
-class RxVisionTrainer(pl.LightningModule):
-    def configure_ddp(self):
-        """
-        Configure DistributedDataParallel for multi-GPU training:
-        - Gradient synchronization
-        - Memory optimization
-        - Fault tolerance
-        """
-        return {
-            'find_unused_parameters': False,
-            'gradient_as_bucket_view': True,
-            'static_graph': True
-        }
+def create_transforms(
+    img_size: tuple[int, int] = (224, 224),
+    augment: bool = True
+) -> dict[str, A.Compose]:
+    """Create training and validation transforms."""
+    train_transform = A.Compose([
+        A.RandomResizedCrop(*img_size),
+        A.HorizontalFlip(p=0.5),
+        A.ShiftScaleRotate(p=0.5),
+        A.ColorJitter(
+            brightness=0.2,
+            contrast=0.2,
+            saturation=0.2,
+            hue=0.1,
+            p=0.5
+        ),
+        A.Normalize(),
+        ToTensorV2(),
+    ])
+    
+    val_transform = A.Compose([
+        A.Resize(*img_size),
+        A.Normalize(),
+        ToTensorV2(),
+    ])
+    
+    return {
+        "train": train_transform,
+        "val": val_transform
+    }
 ```
 
-### Experiment Management
-```yaml
-# configs/experiment.yaml
-tracking:
-  mlflow:
-    experiment_name: rxvision_training
-    tracking_uri: ${oc.env:MLFLOW_TRACKING_URI}
-    tags:
-      owner: ${oc.env:USER}
-      priority: high
+## Model Architecture
 
+### Backbone Selection
+```python
+class RxVisionBackbone(nn.Module):
+    """Custom vision backbone with attention."""
+    
+    def __init__(
+        self,
+        base_model: str = "resnet50",
+        pretrained: bool = True,
+        freeze_layers: bool = True
+    ):
+        super().__init__()
+        self.base = timm.create_model(
+            base_model,
+            pretrained=pretrained,
+            features_only=True
+        )
+        
+        if freeze_layers:
+            self._freeze_base_layers()
+        
+        self.attention = SelfAttention(
+            in_channels=2048,
+            heads=8
+        )
+    
+    def forward(self, x: Tensor) -> tuple[Tensor, Tensor]:
+        """Forward pass with attention maps."""
+        features = self.base(x)
+        out, attention = self.attention(features[-1])
+        return out, attention
+```
+
+### Training Configuration
+```yaml
+# configs/training.yaml
 model:
-  architecture: resnet50
+  backbone: resnet50
   pretrained: true
-  fine_tuning:
-    freeze_backbone: false
-    gradual_unfreeze: true
+  num_classes: 1000
+  dropout: 0.3
 
 training:
+  batch_size: 32
+  epochs: 100
   optimizer:
     name: AdamW
     lr: 1e-4
@@ -101,6 +138,70 @@ training:
     name: CosineAnnealingWarmRestarts
     T_0: 10
     eta_min: 1e-6
+
+data:
+  img_size: [224, 224]
+  augmentation: true
+  num_workers: 4
+```
+
+## Training Pipeline
+
+### Training Loop
+```python
+class RxVisionTrainer(pl.LightningModule):
+    def training_step(
+        self,
+        batch: tuple[Tensor, Tensor],
+        batch_idx: int
+    ) -> dict[str, Tensor]:
+        """Single training step with logging."""
+        images, labels = batch
+        
+        # Forward pass
+        logits, attention = self.model(images)
+        loss = self.criterion(logits, labels)
+        
+        # Compute metrics
+        accuracy = self.compute_accuracy(logits, labels)
+        
+        # Log metrics
+        self.log("train/loss", loss)
+        self.log("train/accuracy", accuracy)
+        
+        # Log attention maps periodically
+        if batch_idx % 100 == 0:
+            self._log_attention_maps(attention, images)
+        
+        return {"loss": loss, "accuracy": accuracy}
+```
+
+### Model Evaluation
+```python
+@torch.no_grad()
+def evaluate_model(
+    model: nn.Module,
+    val_loader: DataLoader,
+    metrics: list[Metric]
+) -> dict[str, float]:
+    """Comprehensive model evaluation."""
+    model.eval()
+    results = defaultdict(list)
+    
+    for images, labels in val_loader:
+        # Forward pass
+        logits = model(images)
+        preds = logits.argmax(dim=1)
+        
+        # Update metrics
+        for metric in metrics:
+            metric.update(preds, labels)
+    
+    # Compute final metrics
+    return {
+        metric.name: metric.compute()
+        for metric in metrics
+    }
 ```
 
 ## Model Registry
@@ -108,97 +209,84 @@ training:
 ### Version Control
 ```python
 class ModelRegistry:
-    def register_model(
+    def save_checkpoint(
         self,
         model: nn.Module,
         metrics: dict[str, float],
         metadata: dict[str, Any]
     ) -> str:
-        """
-        Register model with:
-        - Performance metrics
-        - Training metadata
-        - Dependencies
-        - Dataset version
-        """
-        if not self._meets_production_criteria(metrics):
-            raise ModelQualityError("Model doesn't meet production criteria")
+        """Save model checkpoint with metadata."""
+        # Generate version
+        version = self._generate_version()
         
-        return self._save_model(model, metrics, metadata)
-```
-
-## Serving Pipeline
-
-### Model Deployment
-```python
-@torch.jit.script
-class ServingModel(nn.Module):
-    """
-    Production-optimized model:
-    - TorchScript compilation
-    - Quantization (dynamic)
-    - Batch inference
-    - CPU/GPU optimization
-    """
-    def forward(
-        self, 
-        x: torch.Tensor,
-        return_features: bool = False
-    ) -> dict[str, torch.Tensor]:
-        with torch.cuda.amp.autocast():
-            features = self.backbone(x)
-            logits = self.head(features)
-            
-        return {
-            'logits': logits,
-            'features': features if return_features else None
+        # Save model
+        checkpoint = {
+            "state_dict": model.state_dict(),
+            "metrics": metrics,
+            "metadata": metadata
         }
+        
+        path = self.save_dir / f"model-{version}.pt"
+        torch.save(checkpoint, path)
+        
+        # Log to MLflow
+        self._log_to_mlflow(checkpoint, version)
+        
+        return version
 ```
 
-## Performance Optimization
+## Deployment Pipeline
 
-### Training Optimizations
-- Mixed precision training
-- Gradient accumulation
-- Memory-efficient backprop
-- CPU/GPU memory pinning
+### Model Optimization
+```python
+def optimize_model(
+    model: nn.Module,
+    sample_input: Tensor
+) -> nn.Module:
+    """Optimize model for production."""
+    # TorchScript compilation
+    script_model = torch.jit.script(model)
+    
+    # Quantization
+    quantized_model = torch.quantization.quantize_dynamic(
+        script_model,
+        {nn.Linear, nn.Conv2d},
+        dtype=torch.qint8
+    )
+    
+    # ONNX export
+    torch.onnx.export(
+        quantized_model,
+        sample_input,
+        "model.onnx",
+        opset_version=13
+    )
+    
+    return quantized_model
+```
 
-### Inference Optimizations
-- TorchScript compilation
-- ONNX export
-- Batch size tuning
-- Caching strategies
+### Serving Configuration
+```yaml
+# serving/config.yaml
+model:
+  version: latest
+  batch_size: 32
+  max_batch_latency: 100  # ms
+  device: cuda
 
-## Monitoring & Alerts
+server:
+  host: 0.0.0.0
+  port: 8000
+  workers: 4
+  timeout: 30
 
-### Training Metrics
-- Loss curves
-- Gradient statistics
-- Resource utilization
-- Training speed (samples/sec)
-
-### Production Metrics
-- Inference latency (p50, p95, p99)
-- Throughput (requests/sec)
-- Error rates
-- Resource efficiency
-
-## Failure Modes & Recovery
-
-### Training Failures
-- Checkpointing strategy
-- Automatic resumption
-- Resource monitoring
-- Alert thresholds
-
-### Serving Failures
-- Circuit breaking
-- Fallback models
-- Auto-recovery
-- Incident tracking
+monitoring:
+  metrics_port: 9090
+  profiling: true
+```
 
 ## Related Documentation
 - [[Model Architecture]]
+- [[Training Process]]
 - [[Performance Optimization]]
-- [[Monitoring Setup]]
-- [[Deployment Guide]] 
+- [[Monitoring Setup]] 
