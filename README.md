@@ -1,82 +1,89 @@
 # RxVision25
 
-Deep learning model for medication image classification.
+🚀 **Next-generation medication identification through advanced deep learning**
 
-## Project Structure
+Modern AI-powered medication classification system designed to achieve >95% real-world accuracy, addressing critical medication safety challenges in healthcare.
+
+## 🎯 Project Status
+
+**Current Phase**: Model Modernization & Infrastructure Setup
+- ✅ Repository restructuring complete
+- ✅ Development plan established  
+- 🔄 Implementing EfficientNetV2 architecture
+- 📋 [View detailed roadmap](ROADMAP.md)
+
+## 📁 Project Structure
 
 ```
 .
-├── data/           # Training data
-│   ├── train/     # Training images by class
-│   └── val/       # Validation images by class (optional)
-├── models/        # Saved models and training logs
-├── src/          # Source code
-│   ├── data/     # Data processing utilities
-│   ├── models/   # Model architectures
-│   ├── training/ # Training scripts
-│   └── utils/    # Helper utilities
-├── v1/           # Original project reference
-└── requirements.txt
-```
+├── src/              # Source code
+│   ├── data/         # Data processing & augmentation
+│   ├── models/       # Model architectures  
+│   ├── training/     # Training pipelines
+│   └── inference/    # API & prediction services
+├── data/             # Data directories (gitignored)
+│   ├── raw/          # Original NIH RxImage data
+│   ├── processed/    # Preprocessed datasets
+│   ├── train/        # Training split
+│   ├── val/          # Validation split  
+│   └── test/         # Test split
+├── tests/            # Test suite
+├── configs/          # Configuration files
+├── outputs/          # Model outputs & logs
+├── v1/               # Legacy reference implementation
+└── docs/             # Documentation
 
-## Setup
+## 🚀 Quick Start
 
-1. Create a Python environment:
+### 1. Environment Setup
 ```bash
-python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
-```
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-2. Install dependencies:
-```bash
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-3. Training Data:
-The training data is not included in this repository due to its size. You'll need to:
-- Download the dataset from the [NIH RxImage Portal](https://www.nlm.nih.gov/databases/download/pill_image.html)
-- Place the images in `data/train/` and `data/val/` directories following the structure shown below
-- Each class should be in its own subdirectory
-
-## Training
-
-1. Organize your training data:
-```
-data/
-├── train/
-│   ├── class1/
-│   │   ├── image1.jpg
-│   │   └── image2.jpg
-│   └── class2/
-│       ├── image3.jpg
-│       └── image4.jpg
-└── val/  # Optional
-    ├── class1/
-    └── class2/
-```
-
-2. Run training:
+### 2. Data Preparation
+Download the NIH RxImage dataset:
 ```bash
-python src/training/train.py
+# Dataset will be automatically organized into data/ structure
+python scripts/download_data.py
 ```
 
-Models and training logs will be saved in `models/` with timestamps.
+### 3. Training
+```bash
+# Train EfficientNetV2 model
+python src/training/train.py --config configs/efficientnet_b0.yaml
 
-## Model Architecture
+# Monitor training
+tensorboard --logdir outputs/tensorboard
+```
 
-Based on the best performing model from v1:
-- 4 convolutional blocks with increasing filters (768 → 1024 → 512 → 256)
-- Spatial and regular dropout for regularization
-- Gaussian noise for robustness
-- Dense softmax layer for classification
+### 4. Inference API
+```bash
+# Start FastAPI server
+uvicorn src.inference.api:app --reload
 
-## Data Augmentation
+# Test prediction
+curl -X POST "http://localhost:8000/predict" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@path/to/pill_image.jpg"
+```
 
-- Rotation (±45°)
-- Width/height shifts (±20%)
-- Shear transformation
-- Zoom (±50%)
-- Horizontal and vertical flips
+## 🏗️ Architecture
+
+### Model Evolution
+- **Legacy (v1)**: VGG16 transfer learning → 93% validation, ~50% real-world accuracy
+- **Current (v2.5)**: EfficientNetV2 + advanced augmentation → targeting >95% real-world accuracy
+
+### Key Features
+- 🎯 **Modern Architecture**: EfficientNetV2 backbone optimized for medical images
+- 🔄 **Advanced Augmentation**: Albumentations pipeline with domain-specific transforms
+- ⚡ **Fast Inference**: <1 second prediction time with ONNX optimization
+- 📊 **Explainable AI**: Grad-CAM visualizations for model decisions
+- 🔒 **Privacy-First**: Local processing for HIPAA compliance
 
 ![RxVision_splash.jpg](https://github.com/a-woodbury/RxVision/blob/master/Images/RxVision_splash.jpg)
 

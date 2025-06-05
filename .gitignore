@@ -38,18 +38,35 @@ ENV/
 .LSOverride
 ._*
 
-# Project specific
-models/*.h5
-models/*.pkl
-data/train/*
-data/val/*
-!data/train/.gitkeep
-!data/val/.gitkeep
+# Data directories (too large for git)
+data/raw/
+data/train/
+data/val/
+data/test/
+data/processed/
 
-# Project planning
+# Model outputs  
+models/
+outputs/
+*.h5
+*.onnx
+*.trt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# MLflow
+mlruns/
+.mlflow/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Personal chat files
 chat/
-!chat/*.md
-
-# Wiki
-wiki/*
-!wiki/*.md
