@@ -24,19 +24,19 @@ poetry install
 ## Development Environment
 
 ### IDE Setup
-- **VSCode Configuration**
-  ```json
-  {
-    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-    "python.linting.enabled": true,
-    "python.linting.mypyEnabled": true,
-    "python.formatting.provider": "black",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    }
-  }
-  ```
+-**VSCode Configuration**
+```json
+{
+"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+"python.linting.enabled": true,
+"python.linting.mypyEnabled": true,
+"python.formatting.provider": "black",
+"editor.formatOnSave": true,
+"editor.codeActionsOnSave": {
+"source.organizeImports": true
+}
+}
+```
 
 ### Git Configuration
 ```bash

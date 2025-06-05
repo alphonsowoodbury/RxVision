@@ -10,16 +10,16 @@ Using the MobileDeepPill model as a benchmark, we aim to initially achieve 50% a
 
 Model Results as of 5/28/20:
 
-Validation Accuracy: **93%**
+Validation Accuracy:**93%**
 
-Real World Accuracy: **~50%**
+Real World Accuracy:**~50%**
 
 ### Repository Navigation
 <pre>
 Technical Notebook : <a href=https://github.com/a-woodbury/RxVision/blob/master/Notebooks/RxVision_Technical_Notebook.ipynb>Technical Notebook </a>
-Other Notebooks    : <a href=https://github.com/a-woodbury/RxVision/blob/master/RxVision_Modeling.ipynb>Modeling</a>, <a href=https://github.com/a-woodbury/RxVision/blob/master/RRxVision_Data_Collection.ipynb>Data Collection Notebook </a>
-Dataset Links      : <a href=https://www.nlm.nih.gov/databases/download/pill_image.html>NIH RxImage Portal</a>
-Presentation       : <a href=https://github.com/a-woodbury/RxVision/blob/master/Presentation/RxVision.pdf>Slide Deck</a>, <a href=https://docs.google.com/presentation/d/1f2bLza9GFhIXUAMudNsb00RTpHAwg5JegGIw2i2Jg8A/edit?usp=sharing>Google Slides</a>
+Other Notebooks : <a href=https://github.com/a-woodbury/RxVision/blob/master/RxVision_Modeling.ipynb>Modeling</a>, <a href=https://github.com/a-woodbury/RxVision/blob/master/RRxVision_Data_Collection.ipynb>Data Collection Notebook </a>
+Dataset Links : <a href=https://www.nlm.nih.gov/databases/download/pill_image.html>NIH RxImage Portal</a>
+Presentation : <a href=https://github.com/a-woodbury/RxVision/blob/master/Presentation/RxVision.pdf>Slide Deck</a>, <a href=https://docs.google.com/presentation/d/1f2bLza9GFhIXUAMudNsb00RTpHAwg5JegGIw2i2Jg8A/edit?usp=sharing>Google Slides</a>
 </pre>
 
 ### ReadME Navigation
@@ -35,7 +35,7 @@ Presentation       : <a href=https://github.com/a-woodbury/RxVision/blob/master/
 
 ## Problem
 
-Americans are taking more medications than ever. In 2019, more than 4 billion prescriptions were dispensed in retail and mail-order  pharmacies at a cost of $551 billion[kff]. This is in sharp contrast to the 3 billion prescriptions and $117 billion spent in 2000. Across all demographics, 89% of Americans take at least one daily medication, while 29% are taking 5 or more. Per capita, we've gone from 10.8 presctions in 2000 to in 11.9 in 2019. 
+Americans are taking more medications than ever. In 2019, more than 4 billion prescriptions were dispensed in retail and mail-order pharmacies at a cost of $551 billion[kff]. This is in sharp contrast to the 3 billion prescriptions and $117 billion spent in 2000. Across all demographics, 89% of Americans take at least one daily medication, while 29% are taking 5 or more. Per capita, we've gone from 10.8 presctions in 2000 to in 11.9 in 2019. 
 
 These data are skewed when chronic, costly conditions are considered. Having multiple chronic conditions leads to not only more medications but more contraindicated medicines and treatments for side-effects. For example, patients treated for diabetes take 4 times as many medications as those not recieing diabetes treatment[gw]. Another major driver of prescription use increase is the aging population; about 52 million Americans are of age 65 or older and taking the lions share of medications.
 
@@ -43,16 +43,16 @@ When considering this growth, it becomes more clear why medical/medication error
 
 The FDA provides guidance for defining, monitoring, and enforcing practices to reduce medical and medication errors. 
 
-> **Medication Error:** Any preventable event that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the healthcare professional, patient, or consumer.
+>**Medication Error:** Any preventable event that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the healthcare professional, patient, or consumer.
 > 
-> **Adverse Medical Event (ADE):** Any abnormal sign, symptom or laboratory test, or any syndromic combination of such abnormalities, any untoward or unplanned occurrence (e.g. an accident or unplanned pregnancy), or any unexpected deterioration in a concurrent illness
+>**Adverse Medical Event (ADE):** Any abnormal sign, symptom or laboratory test, or any syndromic combination of such abnormalities, any untoward or unplanned occurrence (e.g. an accident or unplanned pregnancy), or any unexpected deterioration in a concurrent illness
 > 
-> **Adverse Medical Reaction (ADR):** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
+>**Adverse Medical Reaction (ADR):** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
 
 <p align="center">
-   <img src=https://github.com/a-woodbury/RxVision/blob/master/Images/ADE.png title="ADE venn" alt="Fig.1 - Medication Errors and Adverse Events."/>
+<img src=https://github.com/a-woodbury/RxVision/blob/master/Images/ADE.png title="ADE venn" alt="Fig.1 - Medication Errors and Adverse Events."/>
 <div align="center">
-   <figcaption>Fig.1 - Medication Errors and Adverse Events.</figcaption>
+<figcaption>Fig.1 - Medication Errors and Adverse Events.</figcaption>
 </div>
 </p>
 
@@ -65,25 +65,25 @@ When an ADE is identified, the course of action is clinical intervention with th
 
 Computerized prescription management, automated dispensing systems, and online prescription ordering have made it easier to get the right medication to the right patient quickly and safely.But human error and negligence will supercede a technological bottleneck if best practices are not upheld. Examples of preventable medication error include:
 
-- **Physician**
-   - Carelessly prescribe the wrong medication
+-**Physician**
+- Carelessly prescribe the wrong medication
 
-- **Physician or Pharmacy**
-   - Give a patient the wrong dosage, unintentionally
-   - Fail to take a history of the patient’s prescription drug use
-   - Fail to warn of all risks associated with the medication
-   - Dangerously mixed different prescription drugs
-   - administering the wrong dosage of medication (i.e., too much or too little medication)
-   - prescribing the patient a medication that the patient is allergic to
-   - prescribing the patient a medication that interacts negatively with other medications that the patient is taking, and
-   - failing to warn the patient of the common side effects of the medication.
+-**Physician or Pharmacy**
+- Give a patient the wrong dosage, unintentionally
+- Fail to take a history of the patient’s prescription drug use
+- Fail to warn of all risks associated with the medication
+- Dangerously mixed different prescription drugs
+- administering the wrong dosage of medication (i.e., too much or too little medication)
+- prescribing the patient a medication that the patient is allergic to
+- prescribing the patient a medication that interacts negatively with other medications that the patient is taking, and
+- failing to warn the patient of the common side effects of the medication.
 
-- **Pharmacy**
-   - Give a patient an unintended medication
-   - mislabeling the medication
-   - administering the wrong medication to a patient
+-**Pharmacy**
+- Give a patient an unintended medication
+- mislabeling the medication
+- administering the wrong medication to a patient
 
-We will narrow our focus on ADEs  caused by medication error at the **pharmacy** or **patient** level.  
+We will narrow our focus on ADEs caused by medication error at the**pharmacy** or**patient** level. 
 
 ### Patient Challenges
 
@@ -102,14 +102,14 @@ Pharmacies invest thousands and millions into their processes and techology stac
 
 ##### Recommendation: Dispensing Validation
 
-To minimize  risk, implementing an image recognition model into the dispensing workflow can identify if a bottle has been filled incorrectly before the pharmacist does their visual inspection. Mail-order pharmacies already use cameras to take an overhead snapshot of the filled bottle for later validation if a patient is concerned, but using an image recognition model can proactively catch misfills before they could become errors. High-volume chain retail pharmacies would also benefit by taking advantage of the model to avoid sending orders back to technicians for filling correctly. 
+To minimize risk, implementing an image recognition model into the dispensing workflow can identify if a bottle has been filled incorrectly before the pharmacist does their visual inspection. Mail-order pharmacies already use cameras to take an overhead snapshot of the filled bottle for later validation if a patient is concerned, but using an image recognition model can proactively catch misfills before they could become errors. High-volume chain retail pharmacies would also benefit by taking advantage of the model to avoid sending orders back to technicians for filling correctly. 
 
 
 
 ### Emergency Challenges
 
 During medical emergencies, EMTs and nurses must work quickly to gather information about the patients symptoms, history, and medications. 
- 
+
 ##### Recommendation: Emergency Intervention
 
 
@@ -125,7 +125,7 @@ The images for training were acquired from the NIH National Library of Medicine'
 ![NDCs_%20Frequency%20of%20Image%20Counts-2.png](https://github.com/a-woodbury/RxVision/blob/master/Images/NDCs_%20Frequency%20of%20Image%20Counts-2.png) ![File%20Types.png](https://github.com/a-woodbury/RxVision/blob/master/Images/File%20Types.png)
 
 <p align="center">
-   <img src=https://github.com/a-woodbury/RxVision/blob/master/Images/Image%20Types.png/>
+<img src=https://github.com/a-woodbury/RxVision/blob/master/Images/Image%20Types.png/>
 </p>
 
 
@@ -178,21 +178,21 @@ Contributors : <a href=https://github.com/a-woodbury>Alphonso Woodbury</a>
 </pre>
 
 <pre>
-Languages    : Python
-Tools/IDE    : Anaconda, Colab
-Libraries    : Tensorflow, Keras, imagio, PIL, ftplib
+Languages : Python
+Tools/IDE : Anaconda, Colab
+Libraries : Tensorflow, Keras, imagio, PIL, ftplib
 </pre>
 
 <pre>
-Duration     : May 2020
-Last Update  : 05.20.2020
+Duration : May 2020
+Last Update : 05.20.2020
 </pre>
 
 <pre>
-Domain       : Computer Vision, Machine Learning
-Sub-Domain   : Deep Learning, Image Recognition
-Techniques   : Deep Convolutional Neural Network, 
-Application  : Image Recognition, Image Classification
+Domain : Computer Vision, Machine Learning
+Sub-Domain : Deep Learning, Image Recognition
+Techniques : Deep Convolutional Neural Network, 
+Application : Image Recognition, Image Classification
 </pre>
 
 ## Works Cited
@@ -211,7 +211,7 @@ Application  : Image Recognition, Image Classification
 12. [Automatic Drug image identification](http://www.ijicic.org/ijicic-11-01017.pdf)
 13. [NLM RxImage API](https://rxnav.nlm.nih.gov/RxImageAPIs.html#)
 
-Medication errors also have a financial toll. In response to these errors that lead to heath deficiency or death, malpractice suits have grown to account for 5% of...   The average cost of an ADE is $2,257 (FDA 2004).
+Medication errors also have a financial toll. In response to these errors that lead to heath deficiency or death, malpractice suits have grown to account for 5% of... The average cost of an ADE is $2,257 (FDA 2004).
 
 Adverse drug events cost the United States $37.6 billion each year, and approximately $17 billion of these costs are associated with preventable errors (Source: “To Error is Human: Building a Safer Health System,” a November 1999 report from the Institute of Medicine [IOM]).
 

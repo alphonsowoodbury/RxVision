@@ -1,6 +1,6 @@
 # Executive Summary
 
-RxVision demonstrates enterprise-grade ML engineering through a medication identification system. This project showcases FAANG-level engineering practices while maintaining pragmatic POC scope.
+RxVision demonstrates enterprise-grade ML engineering through a medication identification system. This project showcases top-tier tech company engineering practices while maintaining pragmatic POC scope.
 
 ## Project Overview
 

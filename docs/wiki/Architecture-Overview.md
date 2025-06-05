@@ -4,40 +4,40 @@
 
 ```mermaid
 graph TB
-    subgraph Client Layer
-        A[Web Client] & B[Mobile Client] & C[API Client]
-    end
-    
-    subgraph API Gateway
-        D[REST Endpoints] & E[gRPC Services]
-    end
-    
-    subgraph Service Layer
-        F[Model Service]
-        G[Data Service]
-        H[Auth Service]
-    end
-    
-    subgraph ML Infrastructure
-        I[Model Registry]
-        J[Feature Store]
-        K[Training Pipeline]
-    end
-    
-    subgraph Storage Layer
-        L[(Model Storage)]
-        M[(Feature Storage)]
-        N[(Image Storage)]
-    end
-    
-    A & B & C --> D & E
-    D & E --> F & G & H
-    F --> I
-    G --> J
-    I & J --> K
-    K --> L
-    J --> M
-    G --> N
+subgraph Client Layer
+A[Web Client] & B[Mobile Client] & C[API Client]
+end
+
+subgraph API Gateway
+D[REST Endpoints] & E[gRPC Services]
+end
+
+subgraph Service Layer
+F[Model Service]
+G[Data Service]
+H[Auth Service]
+end
+
+subgraph ML Infrastructure
+I[Model Registry]
+J[Feature Store]
+K[Training Pipeline]
+end
+
+subgraph Storage Layer
+L[(Model Storage)]
+M[(Feature Storage)]
+N[(Image Storage)]
+end
+
+A & B & C --> D & E
+D & E --> F & G & H
+F --> I
+G --> J
+I & J --> K
+K --> L
+J --> M
+G --> N
 ```
 
 ## Component Overview
@@ -54,19 +54,19 @@ graph TB
 - Request validation and routing
 
 ### Service Layer
-- **Model Service**: Inference and prediction
-- **Data Service**: Image and metadata management
-- **Auth Service**: Authentication and authorization
+-**Model Service**: Inference and prediction
+-**Data Service**: Image and metadata management
+-**Auth Service**: Authentication and authorization
 
 ### ML Infrastructure
-- **Model Registry**: Version control for models
-- **Feature Store**: Cached feature computation
-- **Training Pipeline**: Automated model training
+-**Model Registry**: Version control for models
+-**Feature Store**: Cached feature computation
+-**Training Pipeline**: Automated model training
 
 ### Storage Layer
-- **Model Storage**: Versioned model artifacts
-- **Feature Storage**: Computed features cache
-- **Image Storage**: Raw and processed images
+-**Model Storage**: Versioned model artifacts
+-**Feature Storage**: Computed features cache
+-**Image Storage**: Raw and processed images
 
 ## Design Principles
 
