@@ -1,33 +1,11 @@
 {
   "dataset_info": {
-    "total_images": 15,
-    "num_classes": 3,
-    "creation_date": "2025-09-28T16:28:43.650837",
-    "source": "Synthetic RxVision25 Dataset",
-    "type": "synthetic"
-  },
-  "class_info": {
-    "synthetic_medication_000": {
-      "drug_name": "Synthetic Medication 1",
-      "image_count": 5
-    },
-    "synthetic_medication_001": {
-      "drug_name": "Synthetic Medication 2",
-      "image_count": 5
-    },
-    "synthetic_medication_002": {
-      "drug_name": "Synthetic Medication 3",
-      "image_count": 5
-    }
-  },
-  "split_stats": {
-    "train": 9,
-    "val": 0,
-    "test": 6
-  },
-  "download_stats": {
-    "type": "synthetic_generation",
-    "created": 15,
-    "failed": 0
+    "total_images": 48312,
+    "total_files": 48318,
+    "creation_date": "2025-09-28T17:20:42.836467",
+    "source": "NIH Full Dataset",
+    "type": "real_nih_data",
+    "dataset_type": "full",
+    "location": "data/raw/full"
   }
 }

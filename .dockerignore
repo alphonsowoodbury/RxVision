@@ -1,0 +1,101 @@
+# Git and version control
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.tox
+.venv
+venv/
+.venv/
+env/
+.env
+
+# Testing and coverage
+.pytest_cache
+.coverage
+htmlcov/
+.mypy_cache
+.hypothesis
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Documentation
+docs/_build/
+*.md
+LICENSE
+
+# Data directories (too large for container)
+data/raw/
+data/processed/
+*.zip
+*.tar.gz
+*.csv
+*.json
+*.h5
+*.pkl
+*.npy
+
+# Model files (mount separately)
+models/
+*.h5
+*.pb
+*.onnx
+*.tflite
+
+# Logs and reports
+logs/
+reports/
+*.log
+
+# Build artifacts
+build/
+dist/
+*.egg-info
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
+
+# MLflow
+mlruns/
+
+# Temporary files
+tmp/
+temp/
+
+# Docker
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# CI/CD
+.github/
+
+# Configuration that shouldn't be in container
+.env.local
+.env.production
+secrets/
+credentials/
+
+# Large datasets and artifacts
+*.npz
+*.safetensors
+*.bin
+
+# Backup files
+backups/

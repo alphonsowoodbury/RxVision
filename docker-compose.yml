@@ -1,0 +1,264 @@
+# Docker Compose configuration for RxVision2025
+# Orchestrates development and production environments
+
+version: '3.8'
+
+services:
+  # Production API service
+  rxvision-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILD_DATE: ${BUILD_DATE:-$(date -u +'%Y-%m-%dT%H:%M:%SZ')}
+        VERSION: ${VERSION:-latest}
+        VCS_REF: ${VCS_REF:-$(git rev-parse --short HEAD)}
+    image: rxvision2025:latest
+    container_name: rxvision-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - LOG_LEVEL=info
+      - MODEL_PATH=/app/models/latest.h5
+      - MAX_WORKERS=4
+    volumes:
+      - ./models:/app/models:ro
+      - ./logs:/app/logs
+      - ./data:/app/data:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '1.0'
+        reservations:
+          memory: 1G
+          cpus: '0.5'
+    networks:
+      - rxvision-network
+
+  # Development environment
+  rxvision-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      args:
+        BUILD_DATE: ${BUILD_DATE:-$(date -u +'%Y-%m-%dT%H:%M:%SZ')}
+        VERSION: dev
+    image: rxvision2025:dev
+    container_name: rxvision-dev
+    ports:
+      - "8001:8000"  # API
+      - "8888:8888"  # Jupyter Lab
+      - "6006:6006"  # TensorBoard
+      - "5000:5000"  # MLflow
+    environment:
+      - ENVIRONMENT=development
+      - SERVICES=api,jupyter,tensorboard,mlflow
+      - JUPYTER_ENABLE_LAB=yes
+      - PYTHONPATH=/app
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+      - jupyter-data:/root/.jupyter
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    networks:
+      - rxvision-network
+    profiles:
+      - dev
+
+  # Database for metadata and experiment tracking
+  postgres:
+    image: postgres:15-alpine
+    container_name: rxvision-postgres
+    environment:
+      POSTGRES_DB: rxvision
+      POSTGRES_USER: rxvision
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-development_password}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rxvision"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - rxvision-network
+    profiles:
+      - dev
+      - full
+
+  # Redis for caching and session management
+  redis:
+    image: redis:7-alpine
+    container_name: rxvision-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - rxvision-network
+    profiles:
+      - dev
+      - full
+
+  # MinIO for object storage (model artifacts, datasets)
+  minio:
+    image: minio/minio:latest
+    container_name: rxvision-minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+    volumes:
+      - minio-data:/data
+    command: server /data --console-address ":9001"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    networks:
+      - rxvision-network
+    profiles:
+      - dev
+      - full
+
+  # MLflow tracking server
+  mlflow:
+    image: python:3.10-slim
+    container_name: rxvision-mlflow
+    ports:
+      - "5001:5000"
+    environment:
+      - MLFLOW_BACKEND_STORE_URI=postgresql://rxvision:${POSTGRES_PASSWORD:-development_password}@postgres:5432/rxvision
+      - MLFLOW_DEFAULT_ARTIFACT_ROOT=s3://mlflow-artifacts/
+      - AWS_ACCESS_KEY_ID=${MINIO_ROOT_USER:-minioadmin}
+      - AWS_SECRET_ACCESS_KEY=${MINIO_ROOT_PASSWORD:-minioadmin}
+      - MLFLOW_S3_ENDPOINT_URL=http://minio:9000
+    volumes:
+      - ./mlflow:/mlflow
+    command: >
+      sh -c "
+      pip install mlflow psycopg2-binary boto3 &&
+      mlflow server
+      --backend-store-uri postgresql://rxvision:${POSTGRES_PASSWORD:-development_password}@postgres:5432/rxvision
+      --default-artifact-root s3://mlflow-artifacts/
+      --host 0.0.0.0
+      --port 5000
+      "
+    depends_on:
+      - postgres
+      - minio
+    restart: unless-stopped
+    networks:
+      - rxvision-network
+    profiles:
+      - dev
+      - full
+
+  # Monitoring with Prometheus
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: rxvision-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    networks:
+      - rxvision-network
+    profiles:
+      - monitoring
+      - full
+
+  # Grafana for visualization
+  grafana:
+    image: grafana/grafana:latest
+    container_name: rxvision-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources:ro
+    restart: unless-stopped
+    networks:
+      - rxvision-network
+    profiles:
+      - monitoring
+      - full
+
+  # Load balancer/reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: rxvision-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - rxvision-api
+    restart: unless-stopped
+    networks:
+      - rxvision-network
+    profiles:
+      - production
+      - full
+
+networks:
+  rxvision-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+volumes:
+  postgres-data:
+    driver: local
+  redis-data:
+    driver: local
+  minio-data:
+    driver: local
+  prometheus-data:
+    driver: local
+  grafana-data:
+    driver: local
+  jupyter-data:
+    driver: local

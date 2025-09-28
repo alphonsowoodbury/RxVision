@@ -1,0 +1,81 @@
+{
+  "dataset_info": {
+    "total_images": 450,
+    "num_classes": 15,
+    "creation_date": "2025-09-28T17:03:34.812576",
+    "source": "Synthetic RxVision25 Dataset",
+    "type": "synthetic"
+  },
+  "class_info": {
+    "synthetic_medication_000": {
+      "drug_name": "Synthetic Medication 1",
+      "image_count": 30
+    },
+    "synthetic_medication_001": {
+      "drug_name": "Synthetic Medication 2",
+      "image_count": 30
+    },
+    "synthetic_medication_002": {
+      "drug_name": "Synthetic Medication 3",
+      "image_count": 30
+    },
+    "synthetic_medication_003": {
+      "drug_name": "Synthetic Medication 4",
+      "image_count": 30
+    },
+    "synthetic_medication_004": {
+      "drug_name": "Synthetic Medication 5",
+      "image_count": 30
+    },
+    "synthetic_medication_005": {
+      "drug_name": "Synthetic Medication 6",
+      "image_count": 30
+    },
+    "synthetic_medication_006": {
+      "drug_name": "Synthetic Medication 7",
+      "image_count": 30
+    },
+    "synthetic_medication_007": {
+      "drug_name": "Synthetic Medication 8",
+      "image_count": 30
+    },
+    "synthetic_medication_008": {
+      "drug_name": "Synthetic Medication 9",
+      "image_count": 30
+    },
+    "synthetic_medication_009": {
+      "drug_name": "Synthetic Medication 10",
+      "image_count": 30
+    },
+    "synthetic_medication_010": {
+      "drug_name": "Synthetic Medication 11",
+      "image_count": 30
+    },
+    "synthetic_medication_011": {
+      "drug_name": "Synthetic Medication 12",
+      "image_count": 30
+    },
+    "synthetic_medication_012": {
+      "drug_name": "Synthetic Medication 13",
+      "image_count": 30
+    },
+    "synthetic_medication_013": {
+      "drug_name": "Synthetic Medication 14",
+      "image_count": 30
+    },
+    "synthetic_medication_014": {
+      "drug_name": "Synthetic Medication 15",
+      "image_count": 30
+    }
+  },
+  "split_stats": {
+    "train": 315,
+    "val": 60,
+    "test": 75
+  },
+  "download_stats": {
+    "type": "synthetic_generation",
+    "created": 450,
+    "failed": 0
+  }
+}

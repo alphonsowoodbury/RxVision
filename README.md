@@ -71,8 +71,11 @@ Download the NIH RxImage dataset using the modern NLM Data Discovery API:
 # Install additional dependencies for data acquisition
 pip install rawpy imageio
 
-# Try real NIH dataset from NLM Data Discovery (recommended)
-python scripts/download_data_modern.py --sample --classes 15
+# Download complete NIH RxImage dataset (7.3GB, 48K+ images)
+python scripts/download_data_modern.py --full
+
+# Or download sample dataset for development (517MB, 27 images)
+python scripts/download_data_modern.py --sample
 
 # Or create synthetic dataset for development/testing
 python scripts/download_data_modern.py --synthetic --classes 15
@@ -309,16 +312,19 @@ The images for training were acquired from the NIH National Library of Medicine'
 </p>
 
 
-**Dataset:**
+**NIH RxImage Dataset (Complete):**
 
-- Total Images: 131,271
-- Drug Classes: 4,864
-- Most Common Drug Image: Levothyroxine
+- Total Images: 48,312 pharmaceutical images
+- Drug Classes: 4,864+ unique medications
+- Formats: RXNAV and NLMIMAGE (clean images)
+- Resolutions: 120px, 300px, 600px, 800px, 1024px, original
+- Metadata: Complete drug information with NDC codes, ingredients, physical characteristics
 
-**RxVision:**
+**RxVision2025:**
 
-- Total Images: 490
-- Drug Classes: 15
+- Current Implementation: Complete NIH dataset available
+- Training Ready: Multi-resolution, multi-format pharmaceutical images
+- Rich Labels: Shape, color, size, imprint, and drug identification
 
 
 ![classes.jpg](images/classes-17.jpg)

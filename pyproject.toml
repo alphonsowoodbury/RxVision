@@ -1,0 +1,261 @@
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rxvision2025"
+version = "2.5.0"
+description = "Advanced pharmaceutical computer vision system for medication identification"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Alphonso Woodbury", email = "alphonso.woodbury@example.com"}
+]
+maintainers = [
+    {name = "Alphonso Woodbury", email = "alphonso.woodbury@example.com"}
+]
+keywords = [
+    "computer-vision",
+    "pharmaceutical",
+    "deep-learning",
+    "healthcare",
+    "medication-identification",
+    "tensorflow",
+    "medical-ai"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Scientific/Engineering :: Medical Science Apps."
+]
+requires-python = ">=3.9"
+dependencies = [
+    # Core ML/DL
+    "tensorflow>=2.15.0,<3.0.0",
+    "numpy>=1.23.0,<2.0.0",
+    "scikit-learn>=1.0.0",
+
+    # Data processing
+    "pandas>=2.0.0",
+    "Pillow>=10.0.0",
+
+    # API and services
+    "fastapi>=0.103.2,<1.0.0",
+    "uvicorn[standard]>=0.23.2",
+    "python-multipart>=0.0.6",
+    "httpx>=0.24.1",
+    "aiofiles>=23.2.1",
+
+    # Configuration
+    "pydantic>=1.10.13,<2.0.0",
+    "pyyaml>=6.0.1",
+    "python-dotenv>=1.0.0",
+
+    # Visualization
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.2",
+
+    # MLOps
+    "mlflow>=2.9.0",
+    "tensorboard>=2.13.0",
+
+    # Utilities
+    "tqdm>=4.65.0",
+
+    # Advanced augmentation
+    "albumentations>=1.3.1",
+    "opencv-python>=4.8.1.78",
+
+    # Model optimization
+    "onnx>=1.14.1",
+    "onnxruntime>=1.16.0",
+
+    # Configuration management
+    "hydra-core>=1.3.2",
+    "omegaconf>=2.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    # Testing
+    "pytest>=7.4.2",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.21.1",
+    "pytest-mock>=3.11.1",
+
+    # Code quality
+    "black>=23.7.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.1",
+    "pre-commit>=3.4.0",
+
+    # Type stubs
+    "types-PyYAML>=6.0.12.12",
+    "types-requests>=2.31.0.2",
+    "types-Pillow>=10.0.0.3",
+
+    # Documentation
+    "sphinx>=7.1.2",
+    "sphinx-rtd-theme>=1.3.0",
+    "myst-parser>=2.0.0",
+
+    # Security
+    "bandit>=1.7.5",
+    "safety>=2.3.4",
+]
+
+data = [
+    # Data acquisition dependencies
+    "rawpy>=0.19.1",
+    "imageio>=2.33.0",
+    "requests>=2.31.0",
+]
+
+gpu = [
+    # GPU acceleration (uncomment for NVIDIA GPUs)
+    # "tensorflow-gpu>=2.15.0",
+]
+
+all = [
+    "rxvision2025[dev,data,gpu]"
+]
+
+[project.urls]
+Homepage = "https://github.com/a-woodbury/RxVision2025"
+Documentation = "https://github.com/a-woodbury/RxVision2025/wiki"
+Repository = "https://github.com/a-woodbury/RxVision2025"
+"Bug Tracker" = "https://github.com/a-woodbury/RxVision2025/issues"
+
+[project.scripts]
+rxvision-train = "rxvision2025.training.cli:main"
+rxvision-predict = "rxvision2025.inference.cli:main"
+rxvision-download = "rxvision2025.data.download:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["rxvision2025*"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+# Black configuration
+[tool.black]
+line-length = 88
+target-version = ['py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | v1
+)/
+'''
+
+# isort configuration
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+known_first_party = ["rxvision2025"]
+known_third_party = ["tensorflow", "numpy", "pandas", "PIL", "fastapi"]
+
+# mypy configuration
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+module = [
+    "tensorflow.*",
+    "albumentations.*",
+    "cv2.*",
+    "mlflow.*",
+    "rawpy.*",
+    "imageio.*"
+]
+ignore_missing_imports = true
+
+# pytest configuration
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=src/rxvision2025",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+    "--cov-fail-under=80"
+]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+    "gpu: marks tests that require GPU",
+]
+
+# Coverage configuration
+[tool.coverage.run]
+source = ["src/rxvision2025"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__init__.py",
+    "*/conftest.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+# Bandit security configuration
+[tool.bandit]
+exclude_dirs = ["tests", "v1"]
+skips = ["B101", "B601"]

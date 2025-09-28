@@ -1,0 +1,136 @@
+# Development Dockerfile for RxVision2025
+# Optimized for development with debugging tools and hot reload
+
+FROM python:3.10-slim
+
+# Set build arguments
+ARG BUILD_DATE
+ARG VERSION="dev"
+
+# Labels for metadata
+LABEL maintainer="RxVision2025 Team" \
+      org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="rxvision2025-dev" \
+      org.label-schema.description="Development environment for RxVision2025" \
+      org.label-schema.version=$VERSION \
+      org.label-schema.schema-version="1.0"
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    gcc \
+    g++ \
+    pkg-config \
+    libhdf5-dev \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    libgomp1 \
+    git \
+    curl \
+    wget \
+    vim \
+    htop \
+    tree \
+    make \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+
+# Copy requirements and install dependencies
+COPY pyproject.toml README.md ./
+
+# Install development dependencies
+RUN pip install --no-cache-dir -e ".[dev,data,gpu]"
+
+# Install additional development tools
+RUN pip install --no-cache-dir \
+    jupyter \
+    jupyterlab \
+    notebook \
+    tensorboard \
+    mlflow \
+    wandb \
+    ipython \
+    ipdb \
+    pytest-xdist \
+    pytest-benchmark \
+    memory-profiler \
+    line-profiler
+
+# Create directories
+RUN mkdir -p \
+    data/{raw,processed,train,val,test} \
+    models/{checkpoints,exports} \
+    logs/{training,inference} \
+    reports/{coverage,security,benchmarks} \
+    configs/{training,inference,experiments} \
+    notebooks \
+    scripts
+
+# Copy application code (will be mounted in development)
+COPY src/ ./src/
+COPY scripts/ ./scripts/
+COPY tests/ ./tests/
+COPY configs/ ./configs/
+
+# Install the package in development mode
+RUN pip install --no-cache-dir -e .
+
+# Expose ports
+EXPOSE 8000 8888 6006 5000
+
+# Set environment variables
+ENV PYTHONPATH=/app \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    ENVIRONMENT=development \
+    JUPYTER_ENABLE_LAB=yes
+
+# Create startup script
+RUN echo '#!/bin/bash\n\
+set -e\n\
+\n\
+# Function to run command in background\n\
+run_background() {\n\
+    echo "Starting $1..."\n\
+    nohup $2 > /app/logs/$1.log 2>&1 &\n\
+}\n\
+\n\
+# Start services based on SERVICES environment variable\n\
+if [[ "$SERVICES" == *"api"* ]]; then\n\
+    run_background "api" "uvicorn src.inference.api:app --host 0.0.0.0 --port 8000 --reload"\n\
+fi\n\
+\n\
+if [[ "$SERVICES" == *"jupyter"* ]]; then\n\
+    run_background "jupyter" "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=\"\" --NotebookApp.password=\"\""\n\
+fi\n\
+\n\
+if [[ "$SERVICES" == *"tensorboard"* ]]; then\n\
+    run_background "tensorboard" "tensorboard --logdir=logs --host=0.0.0.0 --port=6006"\n\
+fi\n\
+\n\
+if [[ "$SERVICES" == *"mlflow"* ]]; then\n\
+    run_background "mlflow" "mlflow ui --host=0.0.0.0 --port=5000"\n\
+fi\n\
+\n\
+# If no services specified, start bash\n\
+if [ -z "$SERVICES" ]; then\n\
+    exec "$@"\n\
+else\n\
+    # Keep container running\n\
+    tail -f /dev/null\n\
+fi\n' > /start.sh && chmod +x /start.sh
+
+# Health check for development
+HEALTHCHECK --interval=60s --timeout=30s --start-period=10s --retries=3 \
+    CMD curl -f http://localhost:8000/health 2>/dev/null || exit 1
+
+# Default command
+CMD ["/start.sh", "bash"]

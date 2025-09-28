@@ -57,7 +57,24 @@ class RxImageModernDownloader:
         self.val_dir = self.base_dir / "val"
         self.test_dir = self.base_dir / "test"
 
-        # NLM Data Discovery configuration (Socrata API)
+        # Direct download URLs from NLM Data Discovery portal
+        self.download_urls = {
+            # NIH RxImage Dataset (Working URLs from actual server)
+            "sample": "https://data.lhncbc.nlm.nih.gov/public/Pills/sampleData.zip",          # 517MB - Sample
+            "full": "https://data.lhncbc.nlm.nih.gov/public/Pills/rximage.zip",             # 7.3GB - Complete dataset
+
+            # Legacy URLs (may not work - 403 errors)
+            "reference_legacy": "https://data.lhncbc.nlm.nih.gov/public/Pills/C3PI-Reference-Images.zip",
+            "training_legacy": "https://data.lhncbc.nlm.nih.gov/public/Pills/C3PI-Training-Images.zip",
+
+            # Pillbox Dataset (Production pill images - archived, works but large)
+            "pillbox": "https://ftp.nlm.nih.gov/projects/pillbox/pillbox_production_images_full_202008.zip"  # 1GB
+        }
+
+        # Base URL for individual batch downloads
+        self.batch_base_url = "https://data.lhncbc.nlm.nih.gov/public/Pills/"
+
+        # NLM Data Discovery configuration (Socrata API - kept for fallback)
         self.api_base = "https://datadiscovery.nlm.nih.gov"
         self.dataset_id = "5jdf-gdqh"  # C3PI dataset ID
         self.api_url = f"{self.api_base}/resource/{self.dataset_id}.json"
@@ -490,12 +507,118 @@ class RxImageModernDownloader:
             logger.info(f"  Failed: {self.stats['failed']:,}")
             logger.info(f"  Duration: {duration}")
 
+    def download_from_direct_url(self, dataset_type: str = "sample") -> bool:
+        """Download dataset from direct URLs"""
+        if dataset_type not in self.download_urls:
+            logger.error(f"Unknown dataset type: {dataset_type}")
+            logger.info(f"Available types: {list(self.download_urls.keys())}")
+            return False
+
+        url = self.download_urls[dataset_type]
+        filename = url.split('/')[-1]
+        local_zip = self.base_dir / filename
+
+        logger.info(f"Downloading {dataset_type} dataset from {url}")
+        logger.info(f"This may take a while depending on the dataset size...")
+
+        try:
+            # Download with progress bar
+            response = requests.get(url, stream=True, timeout=60)
+            response.raise_for_status()
+
+            total_size = int(response.headers.get('content-length', 0))
+
+            with open(local_zip, 'wb') as f, tqdm(
+                desc=filename,
+                total=total_size,
+                unit='iB',
+                unit_scale=True,
+                unit_divisor=1024,
+            ) as progress_bar:
+                for chunk in response.iter_content(chunk_size=8192):
+                    if chunk:
+                        f.write(chunk)
+                        progress_bar.update(len(chunk))
+
+            logger.info(f"Downloaded {filename} successfully")
+
+            # Extract the zip file
+            import zipfile
+
+            logger.info(f"Extracting {filename}...")
+            extract_dir = self.raw_dir / dataset_type
+            extract_dir.mkdir(parents=True, exist_ok=True)
+
+            with zipfile.ZipFile(local_zip, 'r') as zip_ref:
+                zip_ref.extractall(extract_dir)
+
+            logger.info(f"Extracted to {extract_dir}")
+
+            # Clean up zip file
+            local_zip.unlink()
+            logger.info(f"Cleaned up {filename}")
+
+            # Analyze extracted dataset
+            self._analyze_extracted_dataset(extract_dir, dataset_type)
+
+            return True
+
+        except Exception as e:
+            logger.error(f"Failed to download {dataset_type} dataset: {e}")
+            return False
+
+    def _analyze_extracted_dataset(self, extract_dir: Path, dataset_type: str):
+        """Analyze the extracted dataset structure"""
+        try:
+            total_files = 0
+            image_files = 0
+
+            for file_path in extract_dir.rglob('*'):
+                if file_path.is_file():
+                    total_files += 1
+                    if file_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
+                        image_files += 1
+
+            logger.info(f"Extracted dataset analysis:")
+            logger.info(f"  Total files: {total_files:,}")
+            logger.info(f"  Image files: {image_files:,}")
+            logger.info(f"  Dataset type: {dataset_type}")
+            logger.info(f"  Location: {extract_dir}")
+
+            # Save dataset info
+            info = {
+                'dataset_info': {
+                    'total_images': image_files,
+                    'total_files': total_files,
+                    'creation_date': datetime.now().isoformat(),
+                    'source': f'NIH {dataset_type.title()} Dataset',
+                    'type': 'real_nih_data',
+                    'dataset_type': dataset_type,
+                    'location': str(extract_dir)
+                }
+            }
+
+            info_path = self.base_dir / 'dataset_info.json'
+            with open(info_path, 'w') as f:
+                json.dump(info, f, indent=2)
+
+            logger.info(f"Dataset information saved to {info_path}")
+
+        except Exception as e:
+            logger.error(f"Failed to analyze extracted dataset: {e}")
+
 def main():
     parser = argparse.ArgumentParser(description='Download NIH RxImage dataset from NLM Data Discovery')
     parser.add_argument('--sample', action='store_true',
-                       help='Download sample dataset (15 classes)')
+                       help='Download C3PI sample dataset (493MB)')
+    parser.add_argument('--reference', action='store_true',
+                       help='Download C3PI reference dataset (6.8GB, 4K images)')
+    parser.add_argument('--training', action='store_true',
+                       help='Download C3PI training dataset (large, 133K images)')
+    parser.add_argument('--pillbox', action='store_true',
+                       help='Download Pillbox dataset (archived production images)')
     parser.add_argument('--full', action='store_true',
-                       help='Download full dataset')
+                       help='Download full dataset (legacy API method)')
     parser.add_argument('--synthetic', action='store_true',
                        help='Create synthetic dataset for testing')
     parser.add_argument('--classes', type=int, default=15,
@@ -509,7 +632,11 @@ def main():
 
     args = parser.parse_args()
 
-    if not (args.sample or args.full or args.synthetic):
+    # Check which dataset type was requested
+    direct_download_types = ['sample', 'reference', 'training', 'pillbox']
+    requested_direct = any(getattr(args, dt) for dt in direct_download_types)
+
+    if not (requested_direct or args.full or args.synthetic):
         # Default to synthetic for testing
         args.synthetic = True
         logger.info("No dataset type specified, creating synthetic dataset for testing")
@@ -523,16 +650,39 @@ def main():
             downloader.create_synthetic_dataset(args.classes, args.records_per_class)
 
         elif args.sample:
-            # Get sample dataset
-            df = downloader.get_sample_dataset(args.classes, args.records_per_class)
-            if not df.empty:
-                downloader.download_images_from_dataset(df, args.workers)
+            # Download C3PI sample dataset
+            success = downloader.download_from_direct_url("sample")
+            if not success:
+                logger.info("Falling back to synthetic dataset creation...")
+                downloader.create_synthetic_dataset(args.classes, args.records_per_class)
 
-        else:
-            # Get full dataset
-            df = downloader.get_full_dataset()
-            if not df.empty:
-                downloader.download_images_from_dataset(df, args.workers)
+        elif args.reference:
+            # Download C3PI reference dataset
+            success = downloader.download_from_direct_url("reference")
+            if not success:
+                logger.info("Falling back to synthetic dataset creation...")
+                downloader.create_synthetic_dataset(args.classes, args.records_per_class)
+
+        elif args.training:
+            # Download C3PI training dataset
+            success = downloader.download_from_direct_url("training")
+            if not success:
+                logger.info("Falling back to synthetic dataset creation...")
+                downloader.create_synthetic_dataset(args.classes, args.records_per_class)
+
+        elif args.pillbox:
+            # Download Pillbox dataset
+            success = downloader.download_from_direct_url("pillbox")
+            if not success:
+                logger.info("Falling back to synthetic dataset creation...")
+                downloader.create_synthetic_dataset(args.classes, args.records_per_class)
+
+        elif args.full:
+            # Download complete NIH dataset (7.3GB)
+            success = downloader.download_from_direct_url("full")
+            if not success:
+                logger.info("Falling back to synthetic dataset creation...")
+                downloader.create_synthetic_dataset(args.classes, args.records_per_class)
 
         logger.info("Data acquisition completed successfully!")
 
