@@ -1,4 +1,5 @@
 # RxVision25
+![RxVision_splash.jpg](images/RxVision_splash.jpg)
 
 **Next-generation medication identification through advanced deep learning**
 
@@ -85,7 +86,6 @@ curl -X POST "http://localhost:8000/predict" \
 -**Explainable AI**: Grad-CAM visualizations for model decisions
 -**Privacy-First**: Local processing for HIPAA compliance
 
-![RxVision_splash.jpg](images/RxVision_splash.jpg)
 
 **Increasing Medication Safety with Deep Learning Image Recognition**
 
