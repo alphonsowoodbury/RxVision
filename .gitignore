@@ -70,3 +70,6 @@ temp/
 
 # Personal chat files
 chat/
+
+# Claude Code configuration
+CLAUDE.md

@@ -85,7 +85,7 @@ curl -X POST "http://localhost:8000/predict" \
 -**Explainable AI**: Grad-CAM visualizations for model decisions
 -**Privacy-First**: Local processing for HIPAA compliance
 
-![RxVision_splash.jpg](https://github.com/a-woodbury/RxVision/blob/master/Images/RxVision_splash.jpg)
+![RxVision_splash.jpg](images/RxVision_splash.jpg)
 
 **Increasing Medication Safety with Deep Learning Image Recognition**
 
@@ -138,7 +138,7 @@ The FDA provides guidance for defining, monitoring, and enforcing practices to r
 >**Adverse Medical Reaction (ADR):** an appreciably harmful or unpleasant reaction, resulting from an intervention related to the use of a medicinal product. 
 
 <p align="center">
-<img src=https://github.com/a-woodbury/RxVision/blob/master/Images/ADE.png title="ADE venn" alt="Fig.1 - Medication Errors and Adverse Events."/>
+<img src="images/ADE.png" title="ADE venn" alt="Fig.1 - Medication Errors and Adverse Events."/>
 <div align="center">
 <figcaption>Fig.1 - Medication Errors and Adverse Events.</figcaption>
 </div>
@@ -210,10 +210,10 @@ We have identified projects and competitions challenging computer engineering te
 
 The images for training were acquired from the NIH National Library of Medicine's [FTP server](https://www.nlm.nih.gov/databases/download/pill_image.html); a python 3.X package ftplib was used to iterate through the folders using the provided directory flat file. 
 
-![NDCs_%20Frequency%20of%20Image%20Counts-2.png](https://github.com/a-woodbury/RxVision/blob/master/Images/NDCs_%20Frequency%20of%20Image%20Counts-2.png) ![File%20Types.png](https://github.com/a-woodbury/RxVision/blob/master/Images/File%20Types.png)
+![NDCs Frequency of Image Counts](images/NDCs_%20Frequency%20of%20Image%20Counts-2.png) ![File Types](images/File%20Types.png)
 
 <p align="center">
-<img src=https://github.com/a-woodbury/RxVision/blob/master/Images/Image%20Types.png/>
+<img src="images/Image%20Types.png"/>
 </p>
 
 
@@ -229,7 +229,7 @@ The images for training were acquired from the NIH National Library of Medicine'
 - Drug Classes: 15
 
 
-![classes.jpg](https://github.com/a-woodbury/RxVision/blob/master/Images/classes-17.jpg)
+![classes.jpg](images/classes-17.jpg)
 
 ## Model
 
@@ -249,7 +249,7 @@ RxVision uses VGG16 to boost accuracy from training, however the real-world resu
 
 ## Future
 
-![RxVision%Future.png](https://github.com/a-woodbury/RxVision/blob/master/Images/RxID%20Future.png)
+![RxVision Future](images/RxID%20Future.png)
 
 ### More Medications
 Once the real-world accuracy is above 90%, I would like to use RxVision to transfer learning to models for more medications
