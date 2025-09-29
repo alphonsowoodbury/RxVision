@@ -9,10 +9,10 @@ description = "Advanced pharmaceutical computer vision system for medication ide
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Alphonso Woodbury", email = "alphonso.woodbury@example.com"}
+    {name = "Alphonso", email = "alphonso@meristem.studio"}
 ]
 maintainers = [
-    {name = "Alphonso Woodbury", email = "alphonso.woodbury@example.com"}
+    {name = "Alphonso", email = "alphonso@meristem.studio"}
 ]
 keywords = [
     "computer-vision",
