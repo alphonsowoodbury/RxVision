@@ -1,0 +1,22 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# User-supplied data and generated artifacts
+/data/
+artifacts/
+/models/
+outputs/
+*.h5
+*.onnx
+*.pt
+*.pth

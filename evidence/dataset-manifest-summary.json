@@ -1,0 +1,18 @@
+{
+  "artifact": "historical NLM-style directory_of_images manifest",
+  "derived_on": "2026-07-15",
+  "manifest_included": false,
+  "row_count": 133774,
+  "unique_ndc_field_values": 4864,
+  "unique_image_type_labels": 8,
+  "method": {
+    "row_count": "number of lines",
+    "unique_ndc_field_values": "distinct first pipe-delimited field",
+    "unique_image_type_labels": "distinct fourth pipe-delimited field"
+  },
+  "limitations": [
+    "Rows are not necessarily unique photographs.",
+    "NDC field values are not model performance evidence.",
+    "The summary does not establish dataset licensing or fitness for medical use."
+  ]
+}
